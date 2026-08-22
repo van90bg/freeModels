@@ -1,0 +1,32 @@
+name: Update verified free models
+
+on:
+  schedule:
+    - cron: "0 20 * * *"   # 03:00 giờ VN hàng ngày (UTC+7)
+  workflow_dispatch: {}     # cho phép chạy tay từ tab Actions
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30      # đủ rộng, không còn giới hạn 6 phút như GAS
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install requests gspread google-auth
+
+      - name: Fetch verified free models
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+        run: python fetch_free_models.py
+
+      - name: Commit kết quả
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: cập nhật verified free models"
+          file_pattern: data/verified_models.json data/verified_models.csv
