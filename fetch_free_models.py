@@ -1,7 +1,7 @@
 """
 Lấy catalog model từ models.dev (https://models.dev/api.json), đọc danh sách provider +
-apiKey từ Google Sheet (cùng cấu trúc sheet "providers"/".env" mà bản GAS gốc dùng),
-lọc model free theo cost trong catalog, verify thật bằng POST /chat/completions với key thật.
+apiKey trực tiếp từ sheet "providers" trong Google Sheet, lọc model free theo cost trong
+catalog, verify thật bằng POST /chat/completions với key thật.
 
 Chỉ cần 1 GitHub Secret (GOOGLE_SERVICE_ACCOUNT_JSON) — thêm provider mới chỉ cần thêm
 dòng trong Sheet, không cần đụng repo/secrets.
@@ -32,7 +32,6 @@ from google.oauth2.service_account import Credentials
 
 SPREADSHEET_ID = "1X6YSk4Mcfjbiwj0Ekr4jNxRjYHjtXp3PZoW__0nnfm8"
 SHEET_PROVIDERS = "providers"
-SHEET_ENV = ".env"
 SHEET_MODEL = "Model"
 
 MODEL_SHEET_HEADERS = [
@@ -91,42 +90,20 @@ def _rows_to_dicts(values):
     return out
 
 
-def load_env_map(client):
-    try:
-        ws = client.open_by_key(SPREADSHEET_ID).worksheet(SHEET_ENV)
-    except gspread.WorksheetNotFound:
-        return {}
-    rows = _rows_to_dicts(ws.get_all_values())
-    env_map = {}
-    for r in rows:
-        name = str(r.get("name", "")).strip()
-        key = str(r.get("apikey", "")).strip()
-        if not name or not key:
-            continue
-        env_map[name] = key
-        env_map[name.lower()] = key
-    return env_map
-
-
 def load_providers(client):
     ws = client.open_by_key(SPREADSHEET_ID).worksheet(SHEET_PROVIDERS)
     rows = _rows_to_dicts(ws.get_all_values())
-    env_map = load_env_map(client)
 
     out = []
     for r in rows:
         pid = str(r.get("id", "")).strip()
         if not pid:
             continue
-        raw_key = str(r.get("apikey", "")).strip()
-        if raw_key.startswith("{env:") and raw_key.endswith("}"):
-            env_name = raw_key[5:-1].strip()
-            raw_key = env_map.get(env_name) or env_map.get(env_name.lower()) or ""
         out.append({
             "id": pid,
             "name": str(r.get("name", "")).strip() or pid,
             "baseUrl": str(r.get("baseurl", "")).strip().rstrip("/"),
-            "apiKey": raw_key,
+            "apiKey": str(r.get("apikey", "")).strip(),
             "exclude": str(r.get("exclude", "")).strip(),
             "freeModels": str(r.get("freemodels", "")).strip(),
             "liveModels": str(r.get("livemodels", "")).strip() == "1",
