@@ -5,6 +5,9 @@ on:
     - cron: "0 20 * * *"   # 03:00 giờ VN hàng ngày (UTC+7)
   workflow_dispatch: {}     # cho phép chạy tay từ tab Actions
 
+permissions:
+  contents: write           # cho phép GITHUB_TOKEN push commit vào repo
+
 jobs:
   update:
     runs-on: ubuntu-latest
