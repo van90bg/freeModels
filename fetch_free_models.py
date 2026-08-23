@@ -22,6 +22,7 @@ import concurrent.futures
 import csv
 import json
 import os
+import re
 import sys
 import time
 from pathlib import Path
@@ -144,6 +145,7 @@ def is_excluded(model_id, exclude_str):
 
 
 def fetch_live_models(base_url, api_key):
+    """Trả dict {model_id: name} từ /models (name có thể rỗng nếu API không cung cấp)."""
     try:
         resp = requests.get(
             f"{base_url}/models",
@@ -153,19 +155,55 @@ def fetch_live_models(base_url, api_key):
         if resp.status_code != 200:
             return None
         data = resp.json()
-        ids = [m.get("id") for m in data.get("data", []) if m.get("id")]
-        return ids or None
+        out = {
+            m.get("id"): str(m.get("name") or "").strip()
+            for m in data.get("data", [])
+            if m.get("id")
+        }
+        return out or None
     except requests.RequestException:
         return None
+
+
+def _norm_id(model_id):
+    """Chuẩn hoá model id để so khớp tên chéo provider: bỏ prefix vendor, gộp dấu phân tách."""
+    s = model_id.lower().split("/")[-1]
+    return re.sub(r"[._:]", "-", s)
+
+
+def build_name_index(catalog):
+    """Index id -> display name gom từ TOÀN BỘ catalog models.dev (exact + normalized)."""
+    exact, norm = {}, {}
+    for p in catalog.values():
+        for mid, m in (p.get("models") or {}).items():
+            name = str(m.get("name") or "").strip()
+            if not name or name.lower() == mid.lower():  # bỏ tên rác trùng id
+                continue
+            exact.setdefault(mid, name)
+            norm.setdefault(_norm_id(mid), name)
+    return exact, norm
+
+
+def resolve_name(model_id, model_meta, name_index):
+    """Ưu tiên: meta từ catalog -> tên live /models -> index chéo catalog -> giữ nguyên id."""
+    exact, norm = name_index
+    name = str(model_meta.get("name") or "").strip()
+    if name:
+        return name
+    hit = exact.get(model_id) or norm.get(_norm_id(model_id))
+    return hit or model_id
 
 
 def build_candidates(prov, meta):
     """Trả list (model_id, model_meta_dict). model_meta_dict rỗng nếu không có catalog (live/manual)."""
     if prov["liveModels"]:
-        live_ids = fetch_live_models(prov["baseUrl"], prov["apiKey"]) if prov["baseUrl"] else None
-        if live_ids:
-            print(f"[{prov['id']}] {len(live_ids)} live models từ /models")
-            candidates = [(mid, {}) for mid in live_ids]
+        live = fetch_live_models(prov["baseUrl"], prov["apiKey"]) if prov["baseUrl"] else None
+        if live:
+            print(f"[{prov['id']}] {len(live)} live models từ /models")
+            candidates = [
+                (mid, {"name": name} if name else {})
+                for mid, name in live.items()
+            ]
         else:
             candidates = []
     elif meta.get("models"):
@@ -276,6 +314,7 @@ def main():
     providers = load_providers(client)
     print(f"Providers: {len(providers)}")
     catalog = fetch_catalog()
+    name_index = build_name_index(catalog)
 
     rows = []
     now = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
@@ -316,7 +355,7 @@ def main():
                 rows.append({
                     "provider": meta.get("name") or prov["name"],
                     "provider_id": prov["id"],
-                    "model": model_meta.get("name", model_id),
+                    "model": resolve_name(model_id, model_meta, name_index),
                     "model_id": model_id,
                     "family": model_meta.get("family", ""),
                     "tool_call": bool_text(model_meta.get("tool_call")),
