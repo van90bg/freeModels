@@ -23,7 +23,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "Kilo Gateway",
@@ -49,7 +49,7 @@
     "last_updated": "2026-06-17",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "Kilo Gateway",
@@ -75,7 +75,7 @@
     "last_updated": "2026-08-14",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "Kilo Gateway",
@@ -101,7 +101,7 @@
     "last_updated": "1970-01-01",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "Kilo Gateway",
@@ -127,7 +127,7 @@
     "last_updated": "2026-08-11",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "Kilo Gateway",
@@ -153,7 +153,7 @@
     "last_updated": "2025-08-26",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "Kilo Gateway",
@@ -179,7 +179,7 @@
     "last_updated": "2026-04-28",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "Kilo Gateway",
@@ -205,7 +205,7 @@
     "last_updated": "2026-03-11",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "Kilo Gateway",
@@ -231,7 +231,7 @@
     "last_updated": "2026-06-04",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "Kilo Gateway",
@@ -257,7 +257,7 @@
     "last_updated": "2026-08-11",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "Kilo Gateway",
@@ -283,7 +283,7 @@
     "last_updated": "2026-07-21",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "Kilo Gateway",
@@ -309,7 +309,7 @@
     "last_updated": "2026-07-02",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "Kilo Gateway",
@@ -335,7 +335,7 @@
     "last_updated": "2026-08-20",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "Kilo Gateway",
@@ -361,7 +361,7 @@
     "last_updated": "2026-05-29",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "Kilo Gateway",
@@ -387,7 +387,7 @@
     "last_updated": "2026-07-06",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "Kira AI",
@@ -413,7 +413,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "Kira AI",
@@ -439,7 +439,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "Kira AI",
@@ -465,7 +465,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "NaraRouter",
@@ -491,7 +491,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "NaraRouter",
@@ -517,33 +517,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
-  },
-  {
-    "provider": "NaraRouter",
-    "provider_id": "naraya",
-    "model": "Mistral Medium 3.5",
-    "model_id": "mistral-medium-3-5",
-    "family": "",
-    "tool_call": "",
-    "reasoning": "",
-    "attachment": "",
-    "structured_output": "",
-    "temperature": "",
-    "input_cost_1m": 0,
-    "output_cost_1m": 0,
-    "context_limit": "",
-    "input_limit": "",
-    "output_limit": "",
-    "modalities_in": "",
-    "modalities_out": "",
-    "open_weights": "",
-    "knowledge_cutoff": "",
-    "release_date": "",
-    "last_updated": "",
-    "status": "",
-    "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "NaraRouter",
@@ -569,7 +543,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "NaraRouter",
@@ -595,33 +569,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
-  },
-  {
-    "provider": "NaraRouter",
-    "provider_id": "naraya",
-    "model": "stepfun-3.7-flash",
-    "model_id": "stepfun-3.7-flash",
-    "family": "",
-    "tool_call": "",
-    "reasoning": "",
-    "attachment": "",
-    "structured_output": "",
-    "temperature": "",
-    "input_cost_1m": 0,
-    "output_cost_1m": 0,
-    "context_limit": "",
-    "input_limit": "",
-    "output_limit": "",
-    "modalities_in": "",
-    "modalities_out": "",
-    "open_weights": "",
-    "knowledge_cutoff": "",
-    "release_date": "",
-    "last_updated": "",
-    "status": "",
-    "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "Ollama Cloud",
@@ -647,7 +595,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "Ollama Cloud",
@@ -673,7 +621,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "Ollama Cloud",
@@ -699,7 +647,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "Ollama Cloud",
@@ -725,7 +673,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "Ollama Cloud",
@@ -751,7 +699,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "Ollama Cloud",
@@ -777,7 +725,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "Ollama Cloud",
@@ -803,33 +751,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
-  },
-  {
-    "provider": "OpenCode Zen",
-    "provider_id": "opencode",
-    "model": "Big Pickle",
-    "model_id": "big-pickle",
-    "family": "",
-    "tool_call": "",
-    "reasoning": "",
-    "attachment": "",
-    "structured_output": "",
-    "temperature": "",
-    "input_cost_1m": 0,
-    "output_cost_1m": 0,
-    "context_limit": "",
-    "input_limit": "",
-    "output_limit": "",
-    "modalities_in": "",
-    "modalities_out": "",
-    "open_weights": "",
-    "knowledge_cutoff": "",
-    "release_date": "",
-    "last_updated": "",
-    "status": "",
-    "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "OpenCode Zen",
@@ -855,7 +777,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "OpenCode Zen",
@@ -881,13 +803,13 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "OpenCode Zen",
     "provider_id": "opencode",
-    "model": "MiMo V2.5 Free",
-    "model_id": "mimo-v2.5-free",
+    "model": "Nemotron 3 Ultra Free",
+    "model_id": "nemotron-3-ultra-free",
     "family": "",
     "tool_call": "",
     "reasoning": "",
@@ -907,7 +829,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "OpenCode Zen",
@@ -933,7 +855,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "OpenRouter",
@@ -959,7 +881,7 @@
     "last_updated": "2026-06-17",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "OpenRouter",
@@ -985,7 +907,7 @@
     "last_updated": "2026-08-14",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "OpenRouter",
@@ -1011,7 +933,7 @@
     "last_updated": "2026-08-11",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "OpenRouter",
@@ -1037,7 +959,7 @@
     "last_updated": "2025-12-15",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "OpenRouter",
@@ -1063,7 +985,7 @@
     "last_updated": "2026-04-28",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "OpenRouter",
@@ -1089,7 +1011,7 @@
     "last_updated": "2026-03-11",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "OpenRouter",
@@ -1115,7 +1037,7 @@
     "last_updated": "2026-06-04",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "OpenRouter",
@@ -1141,7 +1063,7 @@
     "last_updated": "2026-08-11",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "OpenRouter",
@@ -1167,7 +1089,7 @@
     "last_updated": "2025-10-28",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "OpenRouter",
@@ -1193,7 +1115,7 @@
     "last_updated": "2025-08-18",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "OpenRouter",
@@ -1219,7 +1141,7 @@
     "last_updated": "2026-02-01",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "OpenRouter",
@@ -1245,7 +1167,7 @@
     "last_updated": "2026-07-21",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "OpenRouter",
@@ -1271,7 +1193,7 @@
     "last_updated": "2026-07-02",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "OpenRouter",
@@ -1297,7 +1219,7 @@
     "last_updated": "2026-08-20",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "OrcaRouter",
@@ -1323,7 +1245,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "OrcaRouter",
@@ -1349,7 +1271,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "OrcaRouter",
@@ -1375,7 +1297,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "OrcaRouter",
@@ -1401,7 +1323,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "OrcaRouter",
@@ -1427,7 +1349,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "Poolside",
@@ -1453,7 +1375,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   },
   {
     "provider": "Poolside",
@@ -1479,6 +1401,6 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-23T20:16:57Z"
+    "last_synced": "2026-08-23T20:25:33Z"
   }
 ]
