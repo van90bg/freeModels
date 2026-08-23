@@ -28,6 +28,11 @@ jobs:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
         run: python fetch_free_models.py
 
+      - name: Thông báo SeaTalk nếu có thay đổi
+        env:
+          SEATALK_WEBHOOK_URL: ${{ secrets.SEATALK_WEBHOOK_URL }}
+        run: python notify_changes.py
+
       - name: Commit kết quả
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
