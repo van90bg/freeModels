@@ -2,7 +2,7 @@
   {
     "provider": "Kenari",
     "provider_id": "kenari",
-    "model": "glm-4-7-flash:free",
+    "model": "GLM-4.7-Flash (Free)",
     "model_id": "glm-4-7-flash:free",
     "family": "",
     "tool_call": "",
@@ -23,12 +23,12 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "Kenari",
     "provider_id": "kenari",
-    "model": "laguna-s-2-1:free",
+    "model": "Laguna S 2.1 (free)",
     "model_id": "laguna-s-2-1:free",
     "family": "",
     "tool_call": "",
@@ -49,7 +49,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "Kilo Gateway",
@@ -75,7 +75,7 @@
     "last_updated": "2026-06-17",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "Kilo Gateway",
@@ -101,7 +101,7 @@
     "last_updated": "2026-08-14",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "Kilo Gateway",
@@ -127,7 +127,7 @@
     "last_updated": "1970-01-01",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "Kilo Gateway",
@@ -153,7 +153,7 @@
     "last_updated": "2026-08-11",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "Kilo Gateway",
@@ -179,7 +179,7 @@
     "last_updated": "2025-08-26",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "Kilo Gateway",
@@ -205,7 +205,7 @@
     "last_updated": "2026-04-28",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "Kilo Gateway",
@@ -231,7 +231,7 @@
     "last_updated": "2026-03-11",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "Kilo Gateway",
@@ -257,7 +257,7 @@
     "last_updated": "2026-06-04",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "Kilo Gateway",
@@ -283,7 +283,7 @@
     "last_updated": "2026-08-11",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "Kilo Gateway",
@@ -309,7 +309,7 @@
     "last_updated": "2026-07-21",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "Kilo Gateway",
@@ -335,7 +335,7 @@
     "last_updated": "2026-07-02",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "Kilo Gateway",
@@ -361,7 +361,7 @@
     "last_updated": "2026-08-20",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "Kilo Gateway",
@@ -387,7 +387,7 @@
     "last_updated": "2026-05-29",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "Kilo Gateway",
@@ -413,12 +413,90 @@
     "last_updated": "2026-07-06",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
+  },
+  {
+    "provider": "Kilo Gateway",
+    "provider_id": "kilo",
+    "model": "Thinking Machines: Inkling Small (free)",
+    "model_id": "thinkingmachines/inkling-small:free",
+    "family": "ling",
+    "tool_call": "Yes",
+    "reasoning": "Yes",
+    "attachment": "Yes",
+    "structured_output": "No",
+    "temperature": "Yes",
+    "input_cost_1m": 0,
+    "output_cost_1m": 0,
+    "context_limit": 262144,
+    "input_limit": "",
+    "output_limit": 262144,
+    "modalities_in": "text, image, audio",
+    "modalities_out": "text",
+    "open_weights": "Yes",
+    "knowledge_cutoff": "",
+    "release_date": "2026-07-30",
+    "last_updated": "2026-07-30",
+    "status": "",
+    "probe": "ok",
+    "last_synced": "2026-08-23T00:10:53Z"
+  },
+  {
+    "provider": "Kilo Gateway",
+    "provider_id": "kilo",
+    "model": "Thinking Machines: Inkling (free)",
+    "model_id": "thinkingmachines/inkling:free",
+    "family": "ling",
+    "tool_call": "Yes",
+    "reasoning": "Yes",
+    "attachment": "Yes",
+    "structured_output": "No",
+    "temperature": "Yes",
+    "input_cost_1m": 0,
+    "output_cost_1m": 0,
+    "context_limit": 262144,
+    "input_limit": "",
+    "output_limit": 262144,
+    "modalities_in": "text, image, audio",
+    "modalities_out": "text",
+    "open_weights": "Yes",
+    "knowledge_cutoff": "",
+    "release_date": "2026-07-15",
+    "last_updated": "2026-07-15",
+    "status": "",
+    "probe": "ok",
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "Kira AI",
     "provider_id": "kiraai",
-    "model": "hy3",
+    "model": "Deepseek V4 flash Free",
+    "model_id": "deepseek-v4-flash-free",
+    "family": "",
+    "tool_call": "",
+    "reasoning": "",
+    "attachment": "",
+    "structured_output": "",
+    "temperature": "",
+    "input_cost_1m": 0,
+    "output_cost_1m": 0,
+    "context_limit": "",
+    "input_limit": "",
+    "output_limit": "",
+    "modalities_in": "",
+    "modalities_out": "",
+    "open_weights": "",
+    "knowledge_cutoff": "",
+    "release_date": "",
+    "last_updated": "",
+    "status": "",
+    "probe": "ok",
+    "last_synced": "2026-08-23T00:10:53Z"
+  },
+  {
+    "provider": "Kira AI",
+    "provider_id": "kiraai",
+    "model": "Tencent: Hy3 Free",
     "model_id": "hy3",
     "family": "",
     "tool_call": "",
@@ -439,12 +517,12 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "Kira AI",
     "provider_id": "kiraai",
-    "model": "kira-mini-1.0",
+    "model": "Kira Mini 1.0",
     "model_id": "kira-mini-1.0",
     "family": "",
     "tool_call": "",
@@ -465,7 +543,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "NaraRouter",
@@ -491,7 +569,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "NaraRouter",
@@ -517,12 +595,12 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "NaraRouter",
     "provider_id": "naraya",
-    "model": "mistral-large",
+    "model": "Mistral Large 2411",
     "model_id": "mistral-large",
     "family": "",
     "tool_call": "",
@@ -543,12 +621,12 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "NaraRouter",
     "provider_id": "naraya",
-    "model": "mistral-medium-3-5",
+    "model": "Mistral Medium 3.5",
     "model_id": "mistral-medium-3-5",
     "family": "",
     "tool_call": "",
@@ -569,33 +647,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
-  },
-  {
-    "provider": "NaraRouter",
-    "provider_id": "naraya",
-    "model": "ox-alpha",
-    "model_id": "ox-alpha",
-    "family": "",
-    "tool_call": "",
-    "reasoning": "",
-    "attachment": "",
-    "structured_output": "",
-    "temperature": "",
-    "input_cost_1m": 0,
-    "output_cost_1m": 0,
-    "context_limit": "",
-    "input_limit": "",
-    "output_limit": "",
-    "modalities_in": "",
-    "modalities_out": "",
-    "open_weights": "",
-    "knowledge_cutoff": "",
-    "release_date": "",
-    "last_updated": "",
-    "status": "",
-    "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "NaraRouter",
@@ -621,7 +673,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "NaraRouter",
@@ -647,7 +699,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "NaraRouter",
@@ -673,12 +725,12 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "Ollama Cloud",
     "provider_id": "ollama-cloud",
-    "model": "gemma4:31b",
+    "model": "Gemma 4 31B IT",
     "model_id": "gemma4:31b",
     "family": "",
     "tool_call": "",
@@ -699,12 +751,12 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "Ollama Cloud",
     "provider_id": "ollama-cloud",
-    "model": "gpt-oss:120b",
+    "model": "GPT OSS 120B",
     "model_id": "gpt-oss:120b",
     "family": "",
     "tool_call": "",
@@ -725,12 +777,12 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "Ollama Cloud",
     "provider_id": "ollama-cloud",
-    "model": "gpt-oss:20b",
+    "model": "GPT OSS 20B",
     "model_id": "gpt-oss:20b",
     "family": "",
     "tool_call": "",
@@ -751,12 +803,12 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "Ollama Cloud",
     "provider_id": "ollama-cloud",
-    "model": "minimax-m3",
+    "model": "MiniMax M3",
     "model_id": "minimax-m3",
     "family": "",
     "tool_call": "",
@@ -777,12 +829,12 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "Ollama Cloud",
     "provider_id": "ollama-cloud",
-    "model": "nemotron-3-nano:30b",
+    "model": "Nemotron 3 Nano 30B (Nebius AI)",
     "model_id": "nemotron-3-nano:30b",
     "family": "",
     "tool_call": "",
@@ -803,7 +855,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "Ollama Cloud",
@@ -829,12 +881,12 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "Ollama Cloud",
     "provider_id": "ollama-cloud",
-    "model": "nemotron-3-ultra",
+    "model": "Nemotron 3 Ultra 550B A55B",
     "model_id": "nemotron-3-ultra",
     "family": "",
     "tool_call": "",
@@ -855,12 +907,12 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "OpenCode Zen",
     "provider_id": "opencode",
-    "model": "big-pickle",
+    "model": "Big Pickle",
     "model_id": "big-pickle",
     "family": "",
     "tool_call": "",
@@ -881,12 +933,12 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "OpenCode Zen",
     "provider_id": "opencode",
-    "model": "hy3-free",
+    "model": "Hy3 Free",
     "model_id": "hy3-free",
     "family": "",
     "tool_call": "",
@@ -907,12 +959,12 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "OpenCode Zen",
     "provider_id": "opencode",
-    "model": "laguna-s-2.1-free",
+    "model": "Laguna S 2.1 Free",
     "model_id": "laguna-s-2.1-free",
     "family": "",
     "tool_call": "",
@@ -933,12 +985,12 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "OpenCode Zen",
     "provider_id": "opencode",
-    "model": "mimo-v2.5-free",
+    "model": "MiMo V2.5 Free",
     "model_id": "mimo-v2.5-free",
     "family": "",
     "tool_call": "",
@@ -959,12 +1011,12 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "OpenCode Zen",
     "provider_id": "opencode",
-    "model": "nemotron-3-ultra-free",
+    "model": "Nemotron 3 Ultra Free",
     "model_id": "nemotron-3-ultra-free",
     "family": "",
     "tool_call": "",
@@ -985,12 +1037,12 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "OpenCode Zen",
     "provider_id": "opencode",
-    "model": "nemotron-3.5-lightning-free",
+    "model": "Nemotron 3.5 Lightning Free",
     "model_id": "nemotron-3.5-lightning-free",
     "family": "",
     "tool_call": "",
@@ -1011,12 +1063,12 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "OpenCode Zen",
     "provider_id": "opencode",
-    "model": "x-preview-f-free",
+    "model": "Ox Alpha Free (Unlimited)",
     "model_id": "x-preview-f-free",
     "family": "",
     "tool_call": "",
@@ -1037,7 +1089,7 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "OpenRouter",
@@ -1063,7 +1115,7 @@
     "last_updated": "2026-06-17",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "OpenRouter",
@@ -1089,7 +1141,7 @@
     "last_updated": "2026-08-14",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "OpenRouter",
@@ -1115,7 +1167,7 @@
     "last_updated": "2026-08-11",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "OpenRouter",
@@ -1141,7 +1193,7 @@
     "last_updated": "2025-12-15",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "OpenRouter",
@@ -1167,7 +1219,7 @@
     "last_updated": "2026-04-28",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "OpenRouter",
@@ -1193,7 +1245,7 @@
     "last_updated": "2026-03-11",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "OpenRouter",
@@ -1219,7 +1271,7 @@
     "last_updated": "2026-06-04",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "OpenRouter",
@@ -1245,7 +1297,7 @@
     "last_updated": "2026-08-11",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "OpenRouter",
@@ -1271,7 +1323,7 @@
     "last_updated": "2025-10-28",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "OpenRouter",
@@ -1297,7 +1349,7 @@
     "last_updated": "2025-08-18",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "OpenRouter",
@@ -1323,7 +1375,7 @@
     "last_updated": "2026-02-01",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "OpenRouter",
@@ -1349,7 +1401,7 @@
     "last_updated": "2026-07-21",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "OpenRouter",
@@ -1375,7 +1427,7 @@
     "last_updated": "2026-07-02",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "OpenRouter",
@@ -1401,12 +1453,12 @@
     "last_updated": "2026-08-20",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "OrcaRouter",
     "provider_id": "orcarouter",
-    "model": "deepseek/deepseek-v4-flash-free",
+    "model": "DeepSeek: DeepSeek V4 Flash (Free)",
     "model_id": "deepseek/deepseek-v4-flash-free",
     "family": "",
     "tool_call": "",
@@ -1427,12 +1479,12 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "OrcaRouter",
     "provider_id": "orcarouter",
-    "model": "deepseek/deepseek-v4-pro-free",
+    "model": "DeepSeek: DeepSeek V4 Pro (Free)",
     "model_id": "deepseek/deepseek-v4-pro-free",
     "family": "",
     "tool_call": "",
@@ -1453,12 +1505,12 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "OrcaRouter",
     "provider_id": "orcarouter",
-    "model": "orcarouter/free",
+    "model": "Free Models Router",
     "model_id": "orcarouter/free",
     "family": "",
     "tool_call": "",
@@ -1479,12 +1531,12 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "OrcaRouter",
     "provider_id": "orcarouter",
-    "model": "qwen/qwen3.8-27b-free",
+    "model": "Qwen: Qwen3.8 27B (free)",
     "model_id": "qwen/qwen3.8-27b-free",
     "family": "",
     "tool_call": "",
@@ -1505,12 +1557,12 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "OrcaRouter",
     "provider_id": "orcarouter",
-    "model": "tencent/hy3-free",
+    "model": "Tencent: Hy3 (Free)",
     "model_id": "tencent/hy3-free",
     "family": "",
     "tool_call": "",
@@ -1531,12 +1583,12 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "Poolside",
     "provider_id": "poolside",
-    "model": "poolside/laguna-s-2.1",
+    "model": "Laguna S 2.1",
     "model_id": "poolside/laguna-s-2.1",
     "family": "",
     "tool_call": "",
@@ -1557,12 +1609,12 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   },
   {
     "provider": "Poolside",
     "provider_id": "poolside",
-    "model": "poolside/laguna-xs-2.1",
+    "model": "Laguna XS 2.1",
     "model_id": "poolside/laguna-xs-2.1",
     "family": "",
     "tool_call": "",
@@ -1583,6 +1635,6 @@
     "last_updated": "",
     "status": "",
     "probe": "ok",
-    "last_synced": "2026-08-22T23:49:49Z"
+    "last_synced": "2026-08-23T00:10:53Z"
   }
 ]
