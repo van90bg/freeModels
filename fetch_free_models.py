@@ -52,10 +52,13 @@ OUTPUT_CSV = OUTPUT_DIR / "verified_models.csv"
 
 PROBE_MSG = "Reply with exactly three words."
 PROBE_MAX_TOKENS = 8
-REQUEST_TIMEOUT_S = 15
+REQUEST_TIMEOUT_S = 30
 MAX_WORKERS = 20
 RATE_LIMIT_MAX_RETRIES = 2
 RATE_LIMIT_BACKOFF_S = 2.0
+# Trang thai loi TAM THOI (chua kip phan hoi / bi throttle): neu lan chay truoc
+# model van free thi giu nguyen, khong dua vao danh sach "het free"
+TRANSIENT_STATUSES = {"timeout", "rate-limited"}
 
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
@@ -236,6 +239,9 @@ def probe_one(base_url, model_id, api_key):
         try:
             resp = requests.post(url, json=payload, headers=headers, timeout=REQUEST_TIMEOUT_S)
         except requests.Timeout:
+            if attempt < RATE_LIMIT_MAX_RETRIES:
+                time.sleep(RATE_LIMIT_BACKOFF_S * (attempt + 1))
+                continue
             return "timeout"
         except requests.RequestException:
             return "error"
@@ -316,6 +322,17 @@ def main():
     catalog = fetch_catalog()
     name_index = build_name_index(catalog)
 
+    # Trang thai free lan chay truoc (doc TRUOC khi ghi de output) — de giu model
+    # bi timeout/throttle nham, tranh bao "het free" oan
+    prev_ok = {}
+    try:
+        with open(OUTPUT_JSON, encoding="utf-8") as f:
+            for r in json.load(f):
+                if r.get("probe") == "ok":
+                    prev_ok[(r["provider_id"], r["model_id"])] = r.get("last_synced", "")
+    except (FileNotFoundError, json.JSONDecodeError):
+        pass
+
     rows = []
     now = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
 
@@ -344,10 +361,19 @@ def main():
             for fut in concurrent.futures.as_completed(futures):
                 model_id, model_meta = futures[fut]
                 status = fut.result()
+                carried_synced = ""
                 if status != "ok":
-                    if status == "rate-limited":
-                        print(f"  [rate-limited] {prov['id']} {model_id}")
-                    continue
+                    key = (prov["id"], model_id)
+                    if status in TRANSIENT_STATUSES and key in prev_ok:
+                        # Lan truoc van free — chi la chua kip phan hoi/throttle,
+                        # giu nguyen trang thai va thoi diem dong bo cu
+                        carried_synced = prev_ok[key]
+                        print(f"  [giu free] {prov['id']} {model_id} (probe={status})")
+                        status = "ok"
+                    else:
+                        if status == "rate-limited":
+                            print(f"  [rate-limited] {prov['id']} {model_id}")
+                        continue
 
                 cost = model_meta.get("cost", {}) or {}
                 limit = model_meta.get("limit", {}) or {}
@@ -376,7 +402,7 @@ def main():
                     "last_updated": model_meta.get("last_updated", ""),
                     "status": model_meta.get("status", ""),
                     "probe": status,
-                    "last_synced": now,
+                    "last_synced": carried_synced or now,
                 })
 
     rows.sort(key=lambda r: (r["provider"], r["model_id"]))
