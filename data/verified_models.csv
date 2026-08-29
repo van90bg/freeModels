@@ -1,22 +1,24 @@
 provider,provider_id,model,model_id,family,tool_call,reasoning,attachment,structured_output,temperature,input_cost_1m,output_cost_1m,context_limit,input_limit,output_limit,modalities_in,modalities_out,open_weights,knowledge_cutoff,release_date,last_updated,status,probe,last_synced
-Kenari,kenari,Laguna S 2.1 (free),laguna-s-2-1:free,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T16:35:02Z
-Kenari,kenari,MiMo-V2.5 (Free),mimo-v2-5:free,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T16:35:02Z
-Kilo Gateway,kilo,Cohere: North Mini Code (free),cohere/north-mini-code:free,north,Yes,Yes,No,No,Yes,0,0,256000,,64000,text,text,No,,2026-06-17,2026-06-17,,ok,2026-08-28T16:35:02Z
-Kilo Gateway,kilo,Dots Studio: Dots3-Note Preview (free),dots-studio/dots-3-note-preview:free,,Yes,Yes,Yes,Yes,Yes,0,0,512000,,460800,"text, image",text,No,,2026-08-14,2026-08-14,,ok,2026-08-28T16:35:02Z
-Kilo Gateway,kilo,Ling 3.0 Flash Fin (free),inclusionai/ling-3.0-flash-fin:free,ling,Yes,Yes,No,No,Yes,0,0,262144,,32768,text,text,No,,2026-08-27,2026-08-27,,ok,2026-08-28T16:35:02Z
-Kilo Gateway,kilo,Auto Free,kilo-auto/free,auto,Yes,Yes,No,No,Yes,0,0,256000,,10000,text,text,No,,1970-01-01,1970-01-01,,ok,2026-08-28T16:35:02Z
-Kilo Gateway,kilo,LiquidAI: LFM2.5-2.6B (free),liquid/lfm-2.5-2.6b:free,liquid,Yes,Yes,No,Yes,Yes,0,0,65536,,8192,text,text,No,,2026-08-11,2026-08-11,,ok,2026-08-28T16:35:02Z
-Kilo Gateway,kilo,Meituan: LongCat 2.0 (free),meituan/longcat-2.0-free,longcat,Yes,Yes,No,No,Yes,0,0,1048756,,131072,text,text,No,,2025-08-26,2025-08-26,,ok,2026-08-28T16:35:02Z
-Kilo Gateway,kilo,MiniMax: MiniMax M2.7 (free),minimax/minimax-m2.7:free,minimax,Yes,Yes,No,No,Yes,0,0,196608,,196608,text,text,Yes,,2026-03-18,2026-03-18,,ok,2026-08-28T16:35:02Z
-Kilo Gateway,kilo,NVIDIA: Nemotron 3 Nano Omni (free),nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free,nemotron,Yes,Yes,Yes,No,Yes,0,0,256000,,65536,"text, image, video, audio",text,Yes,,2026-04-28,2026-04-28,,ok,2026-08-28T16:35:02Z
-Kilo Gateway,kilo,NVIDIA: Nemotron 3 Super (free),nvidia/nemotron-3-super-120b-a12b:free,nemotron,Yes,Yes,No,Yes,Yes,0,0,262144,,235929,text,text,Yes,,2026-03-11,2026-03-11,,ok,2026-08-28T16:35:02Z
-Kilo Gateway,kilo,Poolside: Laguna S 2.1 (free),poolside/laguna-s-2.1:free,laguna-s,Yes,Yes,No,No,Yes,0,0,262144,,32768,text,text,No,,2026-07-21,2026-07-21,,ok,2026-08-28T16:35:02Z
-Kilo Gateway,kilo,Poolside: Laguna XS 2.1 (free),poolside/laguna-xs-2.1:free,laguna,Yes,Yes,No,No,Yes,0,0,262144,,32768,text,text,No,,2026-07-02,2026-07-02,,ok,2026-08-28T00:15:15Z
-Kilo Gateway,kilo,StepFun: Step 3.7 Flash (free),stepfun/step-3.7-flash:free,,Yes,Yes,Yes,No,Yes,0,0,262144,,262144,"text, image",text,Yes,2026-03-01,2026-05-29,2026-05-29,,ok,2026-08-28T16:35:02Z
-Kilo Gateway,kilo,Tencent: Hy3 (free),tencent/hy3:free,Hy,Yes,Yes,No,No,Yes,0,0,262144,,128000,text,text,Yes,,2026-07-06,2026-07-06,,ok,2026-08-28T16:35:02Z
+Kenari,kenari,Laguna S 2.1 (free),laguna-s-2-1:free,,,,,,,0,0,,,,,,,,,,,ok,2026-08-29T02:45:19Z
+Kenari,kenari,MiMo-V2.5 (Free),mimo-v2-5:free,,,,,,,0,0,,,,,,,,,,,ok,2026-08-29T02:45:19Z
+Kilo Gateway,kilo,Cohere: North Mini Code (free),cohere/north-mini-code:free,north,Yes,Yes,No,No,Yes,0,0,256000,,64000,text,text,No,,2026-06-17,2026-06-17,,ok,2026-08-29T02:45:19Z
+Kilo Gateway,kilo,Dots Studio: Dots3-Note Preview (free),dots-studio/dots-3-note-preview:free,,Yes,Yes,Yes,Yes,Yes,0,0,512000,,460800,"text, image",text,No,,2026-08-14,2026-08-14,,ok,2026-08-29T02:45:19Z
+Kilo Gateway,kilo,Ling 3.0 Flash Fin (free),inclusionai/ling-3.0-flash-fin:free,ling,Yes,Yes,No,No,Yes,0,0,262144,,32768,text,text,No,,2026-08-27,2026-08-27,,ok,2026-08-29T02:45:19Z
+Kilo Gateway,kilo,Auto Free,kilo-auto/free,auto,Yes,Yes,No,No,Yes,0,0,256000,,10000,text,text,No,,1970-01-01,1970-01-01,,ok,2026-08-29T02:45:19Z
+Kilo Gateway,kilo,LiquidAI: LFM2.5-2.6B (free),liquid/lfm-2.5-2.6b:free,liquid,Yes,Yes,No,Yes,Yes,0,0,65536,,8192,text,text,No,,2026-08-11,2026-08-11,,ok,2026-08-29T02:45:19Z
+Kilo Gateway,kilo,Meituan: LongCat 2.0 (free),meituan/longcat-2.0-free,longcat,Yes,Yes,No,No,Yes,0,0,1048756,,131072,text,text,No,,2025-08-26,2025-08-26,,ok,2026-08-29T02:45:19Z
+Kilo Gateway,kilo,MiniMax: MiniMax M2.7 (free),minimax/minimax-m2.7:free,minimax,Yes,Yes,No,No,Yes,0,0,196608,,196608,text,text,Yes,,2026-03-18,2026-03-18,,ok,2026-08-29T02:45:19Z
+Kilo Gateway,kilo,MiniMax: MiniMax M3 (free),minimax/minimax-m3:free,minimax,Yes,Yes,Yes,No,Yes,0,0,1048576,,1048576,"text, image",text,Yes,,2026-06-01,2026-06-01,,ok,2026-08-29T02:45:19Z
+Kilo Gateway,kilo,NVIDIA: Nemotron 3 Nano Omni (free),nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free,nemotron,Yes,Yes,Yes,No,Yes,0,0,256000,,65536,"text, image, video, audio",text,Yes,,2026-04-28,2026-04-28,,ok,2026-08-29T02:45:19Z
+Kilo Gateway,kilo,NVIDIA: Nemotron 3 Super (free),nvidia/nemotron-3-super-120b-a12b:free,nemotron,Yes,Yes,No,Yes,Yes,0,0,262144,,235929,text,text,Yes,,2026-03-11,2026-03-11,,ok,2026-08-29T02:45:19Z
+Kilo Gateway,kilo,NVIDIA: Nemotron 3 Ultra (free),nvidia/nemotron-3-ultra-550b-a55b:free,nemotron,Yes,Yes,No,No,Yes,0,0,1000000,,65536,text,text,Yes,,2026-06-04,2026-06-04,,ok,2026-08-29T02:45:19Z
+Kilo Gateway,kilo,NVIDIA: Nemotron 3.5 Lightning (free),nvidia/nemotron-3.5-lightning:free,nemotron,Yes,Yes,No,No,Yes,0,0,1000000,,65536,text,text,Yes,,2026-08-11,2026-08-11,,ok,2026-08-29T02:45:19Z
+Kilo Gateway,kilo,Poolside: Laguna S 2.1 (free),poolside/laguna-s-2.1:free,laguna-s,Yes,Yes,No,No,Yes,0,0,262144,,32768,text,text,No,,2026-07-21,2026-07-21,,ok,2026-08-29T02:45:19Z
+Kilo Gateway,kilo,Poolside: Laguna XS 2.1 (free),poolside/laguna-xs-2.1:free,laguna,Yes,Yes,No,No,Yes,0,0,262144,,32768,text,text,No,,2026-07-02,2026-07-02,,ok,2026-08-29T02:45:19Z
+Kilo Gateway,kilo,StepFun: Step 3.7 Flash (free),stepfun/step-3.7-flash:free,,Yes,Yes,Yes,No,Yes,0,0,262144,,262144,"text, image",text,Yes,2026-03-01,2026-05-29,2026-05-29,,ok,2026-08-29T02:45:19Z
+Kilo Gateway,kilo,Tencent: Hy3 (free),tencent/hy3:free,Hy,Yes,Yes,No,No,Yes,0,0,262144,,128000,text,text,Yes,,2026-07-06,2026-07-06,,ok,2026-08-29T02:45:19Z
 Kilo Gateway,kilo,Thinking Machines: Inkling Small (free),thinkingmachines/inkling-small:free,ling,Yes,Yes,Yes,No,Yes,0,0,1048576,,262144,"text, image, audio",text,Yes,,2026-07-30,2026-07-30,,ok,2026-08-28T00:15:15Z
 Kilo Gateway,kilo,Thinking Machines: Inkling (free),thinkingmachines/inkling:free,ling,Yes,Yes,Yes,No,Yes,0,0,1048576,,262144,"text, image, audio",text,Yes,,2026-07-15,2026-07-15,,ok,2026-08-28T00:15:15Z
-Kira AI,kiraai,Tencent: Hy3 Free,hy3,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T16:35:02Z
 Kira AI,kiraai,Kira Mini 2.0,kira-2.0,,,,,,,0,0,,,,,,,,,,,ok,2026-08-25T20:31:33Z
 Kira AI,kiraai,Kira 2.0 image,kira-2.0-image,,,,,,,0,0,,,,,,,,,,,ok,2026-08-25T20:31:33Z
 Kira AI,kiraai,Kira 2.5 Flash,kira-2.5-flash,,,,,,,0,0,,,,,,,,,,,ok,2026-08-25T20:31:33Z
@@ -24,46 +26,45 @@ Kira AI,kiraai,Kira 2.5 Pro,kira-2.5-pro,,,,,,,0,0,,,,,,,,,,,ok,2026-08-25T20:31
 Kira AI,kiraai,Kira 3.0 Image,kira-3.0-image,,,,,,,0,0,,,,,,,,,,,ok,2026-08-25T20:31:33Z
 Kira AI,kiraai,Kira 3.5 Flash,kira-3.5-flash,,,,,,,0,0,,,,,,,,,,,ok,2026-08-25T20:31:33Z
 Kira AI,kiraai,Kira 3.5 Pro,kira-3.5-pro,,,,,,,0,0,,,,,,,,,,,ok,2026-08-25T20:31:33Z
-Kira AI,kiraai,Kira Mini 1.0,kira-mini-1.0,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T16:35:02Z
+Kira AI,kiraai,Kira Mini 1.0,kira-mini-1.0,,,,,,,0,0,,,,,,,,,,,ok,2026-08-29T02:45:19Z
 Kira AI,kiraai,Mimo V2.5,mimo-v2.5,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T16:35:02Z
-NaraRouter,naraya,Agnes 2.0 Flash,agnes-2.0-flash,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T16:35:02Z
-NaraRouter,naraya,Agnes 2.5 Flash,agnes-2.5-flash,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T16:35:02Z
-NaraRouter,naraya,DeepSeek V4 Flash,deepseek-v4-flash,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T16:35:02Z
-NaraRouter,naraya,glm-5.3-flash-free,glm-5.3-flash-free,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T16:35:02Z
-NaraRouter,naraya,Laguna S 2.1,laguna-s-2.1,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T16:35:02Z
-NaraRouter,naraya,MiniMax-M3 Free,minimax-m3-free,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T16:35:02Z
-NaraRouter,naraya,Mistral Large 2411,mistral-large,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T00:15:15Z
-NaraRouter,naraya,Mistral Medium 3.5,mistral-medium-3-5,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T00:15:15Z
-NaraRouter,naraya,Nemotron 3 Ultra 550B A55B,nemotron-3-ultra,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T00:15:15Z
-NaraRouter,naraya,Qwen3.8 27B,qwen3.8-27b,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T16:35:02Z
-NaraRouter,naraya,stepfun-3.7-flash,stepfun-3.7-flash,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T16:35:02Z
-NaraRouter,naraya,tencent-hy3-free,tencent-hy3-free,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T16:35:02Z
-Ollama Cloud,ollama-cloud,Gemma 4 31B IT,gemma4:31b,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T00:15:15Z
-Ollama Cloud,ollama-cloud,GPT OSS 120B,gpt-oss:120b,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T00:15:15Z
-Ollama Cloud,ollama-cloud,GPT OSS 20B,gpt-oss:20b,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T16:35:02Z
-Ollama Cloud,ollama-cloud,MiniMax M3,minimax-m3,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T16:35:02Z
-Ollama Cloud,ollama-cloud,Nemotron 3 Nano 30B (Nebius AI),nemotron-3-nano:30b,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T00:15:15Z
-Ollama Cloud,ollama-cloud,nemotron-3-super,nemotron-3-super,,,,,,,0,0,,,,,,,,,,,ok,2026-08-25T20:31:33Z
-Ollama Cloud,ollama-cloud,Nemotron 3 Ultra 550B A55B,nemotron-3-ultra,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T16:35:02Z
-OpenCode Zen,opencode,Big Pickle,big-pickle,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T16:35:02Z
-OpenCode Zen,opencode,Hy3 Free,hy3-free,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T16:35:02Z
-OpenCode Zen,opencode,Ling 3.0 Flash Fin Free,ling-3.0-flash-fin-free,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T16:35:02Z
-OpenCode Zen,opencode,MiMo V2.5 Free,mimo-v2.5-free,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T16:35:02Z
-OpenRouter,openrouter,North Mini Code (free),cohere/north-mini-code:free,north,Yes,Yes,No,No,Yes,0,0,256000,,64000,text,text,Yes,,2026-06-17,2026-06-17,,ok,2026-08-28T16:35:02Z
-OpenRouter,openrouter,Dots3-Note Preview (free),dots-studio/dots-3-note-preview:free,,Yes,Yes,Yes,Yes,Yes,0,0,512000,,460800,"text, image",text,No,,2026-08-14,2026-08-14,,ok,2026-08-28T16:35:02Z
+NaraRouter,naraya,Agnes 2.0 Flash,agnes-2.0-flash,,,,,,,0,0,,,,,,,,,,,ok,2026-08-29T02:45:19Z
+NaraRouter,naraya,Agnes 2.5 Flash,agnes-2.5-flash,,,,,,,0,0,,,,,,,,,,,ok,2026-08-29T02:45:19Z
+NaraRouter,naraya,DeepSeek V4 Flash,deepseek-v4-flash,,,,,,,0,0,,,,,,,,,,,ok,2026-08-29T02:45:19Z
+NaraRouter,naraya,glm-5.3-flash-free,glm-5.3-flash-free,,,,,,,0,0,,,,,,,,,,,ok,2026-08-29T02:45:19Z
+NaraRouter,naraya,Laguna S 2.1,laguna-s-2.1,,,,,,,0,0,,,,,,,,,,,ok,2026-08-29T02:45:19Z
+NaraRouter,naraya,MiniMax-M3 Free,minimax-m3-free,,,,,,,0,0,,,,,,,,,,,ok,2026-08-29T02:45:19Z
+NaraRouter,naraya,Nemotron 3 Ultra 550B A55B,nemotron-3-ultra,,,,,,,0,0,,,,,,,,,,,ok,2026-08-29T02:45:19Z
+NaraRouter,naraya,Qwen3.8 27B,qwen3.8-27b,,,,,,,0,0,,,,,,,,,,,ok,2026-08-29T02:45:19Z
+NaraRouter,naraya,stepfun-3.7-flash,stepfun-3.7-flash,,,,,,,0,0,,,,,,,,,,,ok,2026-08-29T02:45:19Z
+NaraRouter,naraya,tencent-hy3-free,tencent-hy3-free,,,,,,,0,0,,,,,,,,,,,ok,2026-08-29T02:45:19Z
+Ollama Cloud,ollama-cloud,Gemma 4 31B IT,gemma4:31b,,,,,,,0,0,,,,,,,,,,,ok,2026-08-29T02:45:19Z
+Ollama Cloud,ollama-cloud,GPT OSS 120B,gpt-oss:120b,,,,,,,0,0,,,,,,,,,,,ok,2026-08-29T02:45:19Z
+Ollama Cloud,ollama-cloud,MiniMax M3,minimax-m3,,,,,,,0,0,,,,,,,,,,,ok,2026-08-29T02:45:19Z
+Ollama Cloud,ollama-cloud,nemotron-3-super,nemotron-3-super,,,,,,,0,0,,,,,,,,,,,ok,2026-08-29T02:45:19Z
+Ollama Cloud,ollama-cloud,Nemotron 3 Ultra 550B A55B,nemotron-3-ultra,,,,,,,0,0,,,,,,,,,,,ok,2026-08-29T02:45:19Z
+OpenCode Zen,opencode,Big Pickle,big-pickle,,,,,,,0,0,,,,,,,,,,,ok,2026-08-29T02:45:19Z
+OpenCode Zen,opencode,Hy3 Free,hy3-free,,,,,,,0,0,,,,,,,,,,,ok,2026-08-29T02:45:19Z
+OpenCode Zen,opencode,Laguna S 2.1 Free,laguna-s-2.1-free,,,,,,,0,0,,,,,,,,,,,ok,2026-08-29T02:45:19Z
+OpenCode Zen,opencode,Ling 3.0 Flash Fin Free,ling-3.0-flash-fin-free,,,,,,,0,0,,,,,,,,,,,ok,2026-08-29T02:45:19Z
+OpenCode Zen,opencode,MiMo V2.5 Free,mimo-v2.5-free,,,,,,,0,0,,,,,,,,,,,ok,2026-08-29T02:45:19Z
+OpenRouter,openrouter,North Mini Code (free),cohere/north-mini-code:free,north,Yes,Yes,No,No,Yes,0,0,256000,,64000,text,text,Yes,,2026-06-17,2026-06-17,,ok,2026-08-29T02:45:19Z
+OpenRouter,openrouter,Dots3-Note Preview (free),dots-studio/dots-3-note-preview:free,,Yes,Yes,Yes,Yes,Yes,0,0,512000,,460800,"text, image",text,No,,2026-08-14,2026-08-14,,ok,2026-08-29T02:45:19Z
 OpenRouter,openrouter,Gemma 4 26B A4B  (free),google/gemma-4-26b-a4b-it:free,gemma,Yes,Yes,Yes,No,Yes,0,0,262144,,32768,"image, text, video",text,Yes,,2026-04-02,2026-04-02,,ok,2026-08-24T11:18:36Z
-OpenRouter,openrouter,Ling 3.0 Flash Fin (free),inclusionai/ling-3.0-flash-fin:free,ling,Yes,Yes,No,No,Yes,0,0,262144,,32768,text,text,No,,2026-08-27,2026-08-27,,ok,2026-08-28T16:35:02Z
-OpenRouter,openrouter,LFM2.5-2.6B (free),liquid/lfm-2.5-2.6b:free,liquid,Yes,Yes,No,Yes,Yes,0,0,65536,,8192,text,text,Yes,,2026-08-11,2026-08-11,,ok,2026-08-28T16:35:02Z
-OpenRouter,openrouter,MiniMax M2.7 (free),minimax/minimax-m2.7:free,minimax,Yes,Yes,No,No,Yes,0,0,196608,,176947,text,text,Yes,,2026-03-18,2026-03-18,,ok,2026-08-28T16:35:02Z
-OpenRouter,openrouter,MiniMax M3 (free),minimax/minimax-m3:free,minimax,Yes,Yes,Yes,No,Yes,0,0,1048576,,943718,"text, image, video",text,Yes,,2026-06-01,2026-06-01,,ok,2026-08-28T16:35:02Z
-OpenRouter,openrouter,Nemotron 3 Nano Omni (free),nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free,nemotron,Yes,Yes,Yes,No,Yes,0,0,256000,,65536,"text, image, video, audio",text,Yes,,2026-04-28,2026-04-28,,ok,2026-08-28T16:35:02Z
-OpenRouter,openrouter,Nemotron 3 Super (free),nvidia/nemotron-3-super-120b-a12b:free,nemotron,Yes,Yes,No,Yes,Yes,0,0,262144,,235929,text,text,Yes,,2026-03-11,2026-03-11,,ok,2026-08-28T16:35:02Z
-OpenRouter,openrouter,Free Models Router,openrouter/free,,Yes,Yes,Yes,Yes,Yes,0,0,200000,200000,8000,"text, image",text,No,,2026-02-01,2026-02-01,,ok,2026-08-28T16:35:02Z
-OpenRouter,openrouter,Laguna S 2.1 (free),poolside/laguna-s-2.1:free,laguna-s,Yes,Yes,No,No,Yes,0,0,262144,,32768,text,text,Yes,,2026-07-21,2026-07-21,,ok,2026-08-28T00:15:15Z
-OpenRouter,openrouter,Laguna XS 2.1 (free),poolside/laguna-xs-2.1:free,laguna,Yes,Yes,No,No,Yes,0,0,262144,,32768,text,text,Yes,,2026-07-02,2026-07-02,,ok,2026-08-28T16:35:02Z
-OrcaRouter,orcarouter,DeepSeek: DeepSeek V4 Flash (Free),deepseek/deepseek-v4-flash-free,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T16:35:02Z
-OrcaRouter,orcarouter,OrcaRouter Free,orcarouter/free,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T16:35:02Z
-OrcaRouter,orcarouter,Qwen: Qwen3.8 27B (free),qwen/qwen3.8-27b-free,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T16:35:02Z
-OrcaRouter,orcarouter,Tencent: Hy3 (Free),tencent/hy3-free,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T16:35:02Z
-Poolside,poolside,Laguna S 2.1,poolside/laguna-s-2.1,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T16:35:02Z
-Poolside,poolside,Laguna XS 2.1,poolside/laguna-xs-2.1,,,,,,,0,0,,,,,,,,,,,ok,2026-08-28T16:35:02Z
+OpenRouter,openrouter,Ling 3.0 Flash Fin (free),inclusionai/ling-3.0-flash-fin:free,ling,Yes,Yes,No,No,Yes,0,0,262144,,32768,text,text,No,,2026-08-27,2026-08-27,,ok,2026-08-29T02:45:19Z
+OpenRouter,openrouter,LFM2.5-2.6B (free),liquid/lfm-2.5-2.6b:free,liquid,Yes,Yes,No,Yes,Yes,0,0,65536,,8192,text,text,Yes,,2026-08-11,2026-08-11,,ok,2026-08-29T02:45:19Z
+OpenRouter,openrouter,MiniMax M2.7 (free),minimax/minimax-m2.7:free,minimax,Yes,Yes,No,No,Yes,0,0,196608,,176947,text,text,Yes,,2026-03-18,2026-03-18,,ok,2026-08-29T02:45:19Z
+OpenRouter,openrouter,MiniMax M3 (free),minimax/minimax-m3:free,minimax,Yes,Yes,Yes,No,Yes,0,0,1048576,,943718,"text, image, video",text,Yes,,2026-06-01,2026-06-01,,ok,2026-08-29T02:45:19Z
+OpenRouter,openrouter,Nemotron 3 Nano Omni (free),nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free,nemotron,Yes,Yes,Yes,No,Yes,0,0,256000,,65536,"text, image, video, audio",text,Yes,,2026-04-28,2026-04-28,,ok,2026-08-29T02:45:19Z
+OpenRouter,openrouter,Nemotron 3 Super (free),nvidia/nemotron-3-super-120b-a12b:free,nemotron,Yes,Yes,No,Yes,Yes,0,0,262144,,235929,text,text,Yes,,2026-03-11,2026-03-11,,ok,2026-08-29T02:45:19Z
+OpenRouter,openrouter,Nemotron 3 Ultra (free),nvidia/nemotron-3-ultra-550b-a55b:free,nemotron,Yes,Yes,No,No,Yes,0,0,1000000,,65536,text,text,Yes,,2026-06-04,2026-06-04,,ok,2026-08-29T02:45:19Z
+OpenRouter,openrouter,Nemotron 3.5 Lightning (free),nvidia/nemotron-3.5-lightning:free,nemotron,Yes,Yes,No,No,Yes,0,0,1000000,,65536,text,text,Yes,,2026-08-11,2026-08-11,,ok,2026-08-29T02:45:19Z
+OpenRouter,openrouter,Free Models Router,openrouter/free,,Yes,Yes,Yes,Yes,Yes,0,0,200000,200000,8000,"text, image",text,No,,2026-02-01,2026-02-01,,ok,2026-08-29T02:45:19Z
+OpenRouter,openrouter,Laguna S 2.1 (free),poolside/laguna-s-2.1:free,laguna-s,Yes,Yes,No,No,Yes,0,0,262144,,32768,text,text,Yes,,2026-07-21,2026-07-21,,ok,2026-08-29T02:45:19Z
+OpenRouter,openrouter,Laguna XS 2.1 (free),poolside/laguna-xs-2.1:free,laguna,Yes,Yes,No,No,Yes,0,0,262144,,32768,text,text,Yes,,2026-07-02,2026-07-02,,ok,2026-08-29T02:45:19Z
+OrcaRouter,orcarouter,DeepSeek: DeepSeek V4 Flash (Free),deepseek/deepseek-v4-flash-free,,,,,,,0,0,,,,,,,,,,,ok,2026-08-29T02:45:19Z
+OrcaRouter,orcarouter,OrcaRouter Free,orcarouter/free,,,,,,,0,0,,,,,,,,,,,ok,2026-08-29T02:45:19Z
+OrcaRouter,orcarouter,Qwen: Qwen3.8 27B (free),qwen/qwen3.8-27b-free,,,,,,,0,0,,,,,,,,,,,ok,2026-08-29T02:45:19Z
+OrcaRouter,orcarouter,Tencent: Hy3 (Free),tencent/hy3-free,,,,,,,0,0,,,,,,,,,,,ok,2026-08-29T02:45:19Z
+Poolside,poolside,Laguna S 2.1,poolside/laguna-s-2.1,,,,,,,0,0,,,,,,,,,,,ok,2026-08-29T02:45:19Z
+Poolside,poolside,Laguna XS 2.1,poolside/laguna-xs-2.1,,,,,,,0,0,,,,,,,,,,,ok,2026-08-29T02:45:19Z
