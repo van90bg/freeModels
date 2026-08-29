@@ -197,10 +197,12 @@ def resolve_name(model_id, model_meta, name_index):
     return hit or model_id
 
 
-def build_candidates(prov, meta):
+def build_candidates(prov, meta, live=None):
     """Trả list (model_id, model_meta_dict). model_meta_dict rỗng nếu không có catalog (live/manual)."""
     if prov["liveModels"]:
-        live = fetch_live_models(prov["baseUrl"], prov["apiKey"]) if prov["baseUrl"] else None
+        # Dung ket qua live da fetch song song neu co, fallback sync
+        if live is None:
+            live = fetch_live_models(prov["baseUrl"], prov["apiKey"]) if prov["baseUrl"] else None
         if live:
             print(f"[{prov['id']}] {len(live)} live models từ /models")
             candidates = [
@@ -223,7 +225,6 @@ def build_candidates(prov, meta):
 
     # exclude áp dụng đồng nhất cho MỌI nguồn
     return [(mid, m) for mid, m in candidates if not is_excluded(mid, prov["exclude"])]
-
 
 def probe_one(base_url, model_id, api_key):
     url = f"{base_url}/chat/completions"
@@ -314,7 +315,6 @@ def write_model_sheet(client, rows):
     except gspread.exceptions.APIError as e:
         print(f"WARNING: không ghi được sheet '{SHEET_MODEL}' (kiểm tra quyền Editor của service account): {e}")
 
-
 def main():
     client = get_sheet_client()
     providers = load_providers(client)
@@ -336,6 +336,25 @@ def main():
     rows = []
     now = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
 
+    # --- pre-fetch live /models song song (I/O bound) ---
+    live_results: dict[str, dict | None] = {}
+    live_provs = [p for p in providers if p.get("liveModels") and p.get("apiKey") and (p.get("baseUrl") or catalog.get(p["id"], {}).get("api"))]
+    if live_provs:
+        # can baseUrl tu catalog neu chua co
+        for p in live_provs:
+            if not p.get("baseUrl"):
+                p["baseUrl"] = (catalog.get(p["id"], {}).get("api") or "").rstrip("/")
+        with concurrent.futures.ThreadPoolExecutor(max_workers=min(8, len(live_provs))) as pool:
+            fut_to_pid = {pool.submit(fetch_live_models, p["baseUrl"], p["apiKey"]): p["id"] for p in live_provs if p.get("baseUrl")}
+            for fut in concurrent.futures.as_completed(fut_to_pid):
+                pid = fut_to_pid[fut]
+                try:
+                    live_results[pid] = fut.result()
+                except Exception:
+                    live_results[pid] = None
+
+    # --- collect candidates per provider ---
+    candidates_by_pid: dict[str, tuple[dict, dict, list]] = {}
     for prov in providers:
         if not prov["apiKey"]:
             print(f"[{prov['id']}] không có apiKey (kiểm tra cột apiKey / tab .env), bỏ qua")
@@ -348,62 +367,89 @@ def main():
             continue
         prov["baseUrl"] = base_url.rstrip("/")
 
-        candidates = build_candidates(prov, meta)
-        if not candidates:
+        cands = build_candidates(prov, meta, live_results.get(prov["id"]))
+        if not cands:
             continue
-        print(f"[{prov['id']}] {len(candidates)} candidates, probing (concurrent, timeout={REQUEST_TIMEOUT_S}s)...")
+        candidates_by_pid[prov["id"]] = (prov, meta, cands)
 
-        with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
-            futures = {
-                pool.submit(probe_one, prov["baseUrl"], mid, prov["apiKey"]): (mid, m)
-                for mid, m in candidates
-            }
-            for fut in concurrent.futures.as_completed(futures):
-                model_id, model_meta = futures[fut]
-                status = fut.result()
-                carried_synced = ""
-                if status != "ok":
-                    key = (prov["id"], model_id)
-                    if status in TRANSIENT_STATUSES and key in prev_ok:
-                        # Lan truoc van free — chi la chua kip phan hoi/throttle,
-                        # giu nguyen trang thai va thoi diem dong bo cu
-                        carried_synced = prev_ok[key]
-                        print(f"  [giu free] {prov['id']} {model_id} (probe={status})")
-                        status = "ok"
-                    else:
-                        if status == "rate-limited":
-                            print(f"  [rate-limited] {prov['id']} {model_id}")
-                        continue
+    if not candidates_by_pid:
+        print("Không có candidates nào.")
+        rows.sort(key=lambda r: (r["provider"], r["model_id"]))
+        OUTPUT_DIR.mkdir(exist_ok=True)
+        with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
+            json.dump(rows, f, ensure_ascii=False, indent=2)
+        with open(OUTPUT_CSV, "w", encoding="utf-8", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=FIELDNAMES)
+            writer.writeheader()
+            writer.writerows(rows)
+        print(f"Đã ghi {OUTPUT_JSON} và {OUTPUT_CSV}")
+        write_model_sheet(client, rows)
+        return
 
-                cost = model_meta.get("cost", {}) or {}
-                limit = model_meta.get("limit", {}) or {}
-                modalities = model_meta.get("modalities", {}) or {}
-                rows.append({
-                    "provider": meta.get("name") or prov["name"],
-                    "provider_id": prov["id"],
-                    "model": resolve_name(model_id, model_meta, name_index),
-                    "model_id": model_id,
-                    "family": model_meta.get("family", ""),
-                    "tool_call": bool_text(model_meta.get("tool_call")),
-                    "reasoning": bool_text(model_meta.get("reasoning")),
-                    "attachment": bool_text(model_meta.get("attachment")),
-                    "structured_output": bool_text(model_meta.get("structured_output")),
-                    "temperature": bool_text(model_meta.get("temperature")),
-                    "input_cost_1m": cost.get("input", 0),
-                    "output_cost_1m": cost.get("output", 0),
-                    "context_limit": limit.get("context", ""),
-                    "input_limit": limit.get("input", ""),
-                    "output_limit": limit.get("output", ""),
-                    "modalities_in": ", ".join(modalities.get("input", []) or []),
-                    "modalities_out": ", ".join(modalities.get("output", []) or []),
-                    "open_weights": bool_text(model_meta.get("open_weights")),
-                    "knowledge_cutoff": model_meta.get("knowledge", ""),
-                    "release_date": model_meta.get("release_date", ""),
-                    "last_updated": model_meta.get("last_updated", ""),
-                    "status": model_meta.get("status", ""),
-                    "probe": status,
-                    "last_synced": carried_synced or now,
-                })
+    # --- quick auth check 1 probe/provider de skip key hong ---
+    filtered: dict[str, tuple[dict, dict, list]] = {}
+    for pid, (prov, meta, cands) in candidates_by_pid.items():
+        first_mid = cands[0][0]
+        st = probe_one(prov["baseUrl"], first_mid, prov["apiKey"])
+        if st == "auth":
+            print(f"[{pid}] auth failed — bỏ qua {len(cands)} candidates")
+            continue
+        filtered[pid] = (prov, meta, cands)
+
+    # --- global pool probe tat ca models con lai ---
+    all_jobs: list[tuple[dict, dict, str, dict]] = []
+    for pid, (prov, meta, cands) in filtered.items():
+        for mid, mmeta in cands:
+            all_jobs.append((prov, meta, mid, mmeta))
+
+    print(f"Probing {len(all_jobs)} models across {len(filtered)} providers with {MAX_WORKERS} workers (timeout={REQUEST_TIMEOUT_S}s)...")
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
+        futures = {pool.submit(probe_one, prov["baseUrl"], mid, prov["apiKey"]): (prov, meta, mid, mmeta) for prov, meta, mid, mmeta in all_jobs}
+        for fut in concurrent.futures.as_completed(futures):
+            prov, meta, model_id, model_meta = futures[fut]
+            status = fut.result()
+            carried_synced = ""
+            if status != "ok":
+                key = (prov["id"], model_id)
+                if status in TRANSIENT_STATUSES and key in prev_ok:
+                    carried_synced = prev_ok[key]
+                    print(f"  [giu free] {prov['id']} {model_id} (probe={status})")
+                    status = "ok"
+                else:
+                    if status == "rate-limited":
+                        print(f"  [rate-limited] {prov['id']} {model_id}")
+                    continue
+
+            cost = model_meta.get("cost", {}) or {}
+            limit = model_meta.get("limit", {}) or {}
+            modalities = model_meta.get("modalities", {}) or {}
+            rows.append({
+                "provider": meta.get("name") or prov["name"],
+                "provider_id": prov["id"],
+                "model": resolve_name(model_id, model_meta, name_index),
+                "model_id": model_id,
+                "family": model_meta.get("family", ""),
+                "tool_call": bool_text(model_meta.get("tool_call")),
+                "reasoning": bool_text(model_meta.get("reasoning")),
+                "attachment": bool_text(model_meta.get("attachment")),
+                "structured_output": bool_text(model_meta.get("structured_output")),
+                "temperature": bool_text(model_meta.get("temperature")),
+                "input_cost_1m": cost.get("input", 0),
+                "output_cost_1m": cost.get("output", 0),
+                "context_limit": limit.get("context", ""),
+                "input_limit": limit.get("input", ""),
+                "output_limit": limit.get("output", ""),
+                "modalities_in": ", ".join(modalities.get("input", []) or []),
+                "modalities_out": ", ".join(modalities.get("output", []) or []),
+                "open_weights": bool_text(model_meta.get("open_weights")),
+                "knowledge_cutoff": model_meta.get("knowledge", ""),
+                "release_date": model_meta.get("release_date", ""),
+                "last_updated": model_meta.get("last_updated", ""),
+                "status": model_meta.get("status", ""),
+                "probe": status,
+                "last_synced": carried_synced or now,
+            })
 
     rows.sort(key=lambda r: (r["provider"], r["model_id"]))
     print(f"Verified: {len(rows)} model free.")
@@ -419,7 +465,6 @@ def main():
     print(f"Đã ghi {OUTPUT_JSON} và {OUTPUT_CSV}")
 
     write_model_sheet(client, rows)
-
 
 if __name__ == "__main__":
     try:
