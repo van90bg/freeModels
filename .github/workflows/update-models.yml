@@ -1,17 +1,17 @@
-name: Update verified free models
+name: Notify new free models
 
 on:
   schedule:
-    - cron: "0 20 * * *"   # 03:00 giờ VN hàng ngày (UTC+7)
+    - cron: "0 */6 * * *"   # mỗi 6 tiếng (03:00, 09:00, 15:00, 21:00 giờ VN)
   workflow_dispatch: {}     # cho phép chạy tay từ tab Actions
 
 permissions:
-  contents: write           # cho phép GITHUB_TOKEN push commit vào repo
+  contents: write           # cho phép GITHUB_TOKEN commit state vào repo
 
 jobs:
-  update:
+  notify:
     runs-on: ubuntu-latest
-    timeout-minutes: 30      # đủ rộng, không còn giới hạn 6 phút như GAS
+    timeout-minutes: 15
 
     steps:
       - uses: actions/checkout@v4
@@ -21,20 +21,17 @@ jobs:
           python-version: "3.12"
 
       - name: Install deps
-        run: pip install requests gspread google-auth
+        run: pip install gspread google-auth
 
-      - name: Fetch verified free models
+      - name: Quét catalog, ghi sheet và báo model free mới qua Telegram
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
-        run: python fetch_free_models.py
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python check_free_models.py
 
-      - name: Thông báo SeaTalk nếu có thay đổi
-        env:
-          SEATALK_WEBHOOK_URL: ${{ secrets.SEATALK_WEBHOOK_URL }}
-        run: python notify_changes.py
-
-      - name: Commit kết quả
+      - name: Commit state
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: cập nhật verified free models"
-          file_pattern: data/verified_models.json data/verified_models.csv
+          commit_message: "chore: cập nhật free model state"
+          file_pattern: data/free_models.json
