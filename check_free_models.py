@@ -39,6 +39,33 @@ MODEL_SHEET_HEADERS = [
     "Probe", "Last Synced",
 ]
 
+HEADER_TO_FIELD = {
+    "Provider": "provider",
+    "Provider ID": "provider_id",
+    "Model": "model",
+    "Model ID": "model_id",
+    "Family": "family",
+    "Tool Call": "tool_call",
+    "Reasoning": "reasoning",
+    "Attachment": "attachment",
+    "Structured Output": "structured_output",
+    "Temperature": "temperature",
+    "Input Cost/1M": "input_cost_1m",
+    "Output Cost/1M": "output_cost_1m",
+    "Context Limit": "context_limit",
+    "Input Limit": "input_limit",
+    "Output Limit": "output_limit",
+    "Modalities In": "modalities_in",
+    "Modalities Out": "modalities_out",
+    "Open Weights": "open_weights",
+    "Knowledge Cutoff": "knowledge_cutoff",
+    "Release Date": "release_date",
+    "Last Updated": "last_updated",
+    "Status": "status",
+    "Probe": "probe",
+    "Last Synced": "last_synced",
+}
+
 MAX_MESSAGE_CHARS = 4000  # dung luong an toan duoi gioi han 4096 cua Telegram
 
 
@@ -151,7 +178,7 @@ def write_sheet(rows: list[dict]) -> None:
             ws = ss.add_worksheet(title=SHEET_MODEL, rows=max(len(rows) + 10, 100),
                                   cols=len(MODEL_SHEET_HEADERS))
         data = [MODEL_SHEET_HEADERS] + [
-            [r.get(h, "") for h in MODEL_SHEET_HEADERS] for r in rows
+            [r.get(HEADER_TO_FIELD[h], "") for h in MODEL_SHEET_HEADERS] for r in rows
         ]
         ws.clear()
         ws.update(data, value_input_option="RAW")
