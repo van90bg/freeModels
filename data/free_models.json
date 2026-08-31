@@ -1,0 +1,634 @@
+{
+  "umans-ai-coding-plan": {
+    "umans-glm-5.2": "GLM 5.2",
+    "umans-deepseek-v4-flash-0731": "DeepSeek V4 Flash",
+    "umans-deepseek-v4-pro-0813": "DeepSeek V4 Pro",
+    "umans-kimi-k3": "Kimi K3",
+    "umans-qwen3.6-35b-a3b": "Qwen3.6 35B A3B",
+    "umans-coder": "Umans Coder",
+    "umans-flash": "Umans Flash",
+    "umans-kimi-k2.7": "Kimi K2.7 Code"
+  },
+  "meganova": {
+    "mistralai/Mistral-Small-3.2-24B-Instruct-2506": "Mistral Small 3.2 24B Instruct"
+  },
+  "orcarouter": {
+    "tencent/hy3-free": "Hy3 (free)",
+    "orcarouter/auto": "OrcaRouter Auto",
+    "orcarouter/free": "OrcaRouter Free",
+    "deepseek/deepseek-v4-flash-free": "DeepSeek V4 Flash (free)",
+    "qwen/qwen3.8-27b-free": "Qwen3.8 27B (free)"
+  },
+  "nvidia": {
+    "nvidia/llama-3.3-nemotron-super-49b-v1": "Llama 3.3 Nemotron Super 49B v1",
+    "nvidia/nemotron-3-nano-30b-a3b": "nemotron-3-nano-30b-a3b",
+    "nvidia/llama-3.1-nemotron-nano-8b-v1": "Llama 3.1 Nemotron Nano 8B v1",
+    "nvidia/llama-3.1-nemotron-70b-instruct": "Llama 3.1 Nemotron 70B Instruct",
+    "nvidia/nemotron-nano-12b-v2-vl": "Nemotron Nano 12B v2 VL",
+    "nvidia/nemotron-voicechat": "nemotron-voicechat",
+    "nvidia/llama-3.3-nemotron-super-49b-v1.5": "Llama 3.3 Nemotron Super 49B v1.5",
+    "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning": "Nemotron 3 Nano Omni",
+    "nvidia/nvidia-nemotron-nano-9b-v2": "nvidia-nemotron-nano-9b-v2",
+    "nvidia/nemotron-3.5-lightning-30b-a3b": "Nemotron 3.5 Lightning 30B A3B",
+    "nvidia/llama-3.1-nemotron-ultra-253b-v1": "Llama 3.1 Nemotron Ultra 253B",
+    "nvidia/cosmos-reason2-8b": "Cosmos Reason2 8B",
+    "nvidia/llama-3.1-nemotron-nano-vl-8b-v1": "Llama 3.1 Nemotron Nano VL 8B v1",
+    "nvidia/nemotron-mini-4b-instruct": "nemotron-mini-4b-instruct",
+    "microsoft/phi-4-mini-instruct": "Phi-4-Mini",
+    "z-ai/glm-5.2": "GLM-5.2",
+    "google/gemma-3n-e2b-it": "Gemma 3n E2b It",
+    "google/gemma-3-4b-it": "Gemma 3 4B IT",
+    "google/gemma-4-31b-it": "Gemma-4-31B-IT",
+    "google/gemma-3n-e4b-it": "Gemma 3n E4b It",
+    "google/gemma-3-12b-it": "Gemma 3 12B IT",
+    "google/gemma-2-2b-it": "Gemma 2 2b It",
+    "meta/llama-3.3-70b-instruct": "Llama 3.3 70b Instruct",
+    "meta/llama-3.2-1b-instruct": "Llama 3.2 1b Instruct",
+    "meta/muse-glimmer-30b": "Muse Glimmer 30B",
+    "meta/llama-3.1-8b-instruct": "Llama 3.1 8B Instruct",
+    "meta/llama-3.1-70b-instruct": "Llama 3.1 70b Instruct",
+    "meta/llama-3.2-90b-vision-instruct": "Llama-3.2-90B-Vision-Instruct",
+    "meta/llama-3.2-11b-vision-instruct": "Llama 3.2 11b Vision Instruct",
+    "meta/llama-4-maverick-17b-128e-instruct": "Llama 4 Maverick 17b 128e Instruct",
+    "poolside/laguna-xs-2.1": "Laguna XS 2.1",
+    "moonshotai/kimi-k3": "Kimi K3",
+    "moonshotai/kimi-k2-instruct-0905": "Kimi K2 0905",
+    "moonshotai/kimi-k2.6": "Kimi K2.6",
+    "bytedance/seed-oss-36b-instruct": "ByteDance-Seed/Seed-OSS-36B-Instruct",
+    "openai/gpt-oss-120b": "GPT-OSS-120B",
+    "openai/gpt-oss-20b": "GPT OSS 20B",
+    "deepseek-ai/deepseek-v4-pro-0813": "DeepSeek V4 Pro 0813",
+    "deepseek-ai/deepseek-v4-flash-0731": "DeepSeek V4 Flash 0731",
+    "stepfun-ai/step-3.5-flash": "Step 3.5 Flash",
+    "stepfun-ai/step-3.7-flash": "Step 3.7 Flash",
+    "qwen/qwen3.5-397b-a17b": "Qwen3.5-397B-A17B",
+    "qwen/qwen3-coder-480b-a35b-instruct": "Qwen3 Coder 480B A35B Instruct",
+    "qwen/qwen2.5-coder-32b-instruct": "Qwen2.5 Coder 32b Instruct",
+    "qwen/qwen3-next-80b-a3b-instruct": "Qwen3-Next-80B-A3B-Instruct",
+    "qwen/qwen3.5-122b-a10b": "Qwen3.5 122B-A10B",
+    "abacusai/dracarys-llama-3.1-70b-instruct": "dracarys-llama-3.1-70b-instruct",
+    "thinkingmachines/inkling": "Inkling",
+    "mistralai/mistral-7b-instruct-v0.3": "Mistral-7B-Instruct-v0.3",
+    "mistralai/mistral-large-3-675b-instruct-2512": "Mistral Large 3 675B Instruct 2512",
+    "mistralai/mistral-nemotron": "mistral-nemotron",
+    "mistralai/mistral-small-4-119b-2603": "mistral-small-4-119b-2603",
+    "mistralai/mixtral-8x7b-instruct": "Mistral: Mixtral 8x7B Instruct",
+    "mistralai/mistral-medium-3.5-128b": "Mistral Medium 3.5",
+    "mistralai/mixtral-8x22b-instruct": "Mistral: Mixtral 8x22B Instruct",
+    "mistralai/ministral-14b-instruct-2512": "Ministral 3 14B Instruct 2512",
+    "minimaxai/minimax-m3": "MiniMax-M3",
+    "minimaxai/minimax-m2.7": "MiniMax-M2.7",
+    "upstage/solar-10.7b-instruct": "solar-10.7b-instruct",
+    "sarvamai/sarvam-m": "sarvam-m"
+  },
+  "qvac": {
+    "gemma4-31b": "Gemma 4 31B IT",
+    "qwen3.5-2b": "Qwen3.5 2B",
+    "gpt-oss-120b": "GPT OSS 120B",
+    "qwen3.5-0.8b": "Qwen3.5 0.8B",
+    "qwen3.5-4b": "Qwen3.5 4B",
+    "qwen3.6-35b-a3b": "Qwen3.6 35B-A3B",
+    "qwen3.6-27b": "Qwen3.6 27B",
+    "qwen3.5-9b": "Qwen3.5 9B",
+    "gpt-oss-20b": "GPT OSS 20B"
+  },
+  "iflowcn": {
+    "glm-4.6": "GLM-4.6",
+    "qwen3-max-preview": "Qwen3-Max-Preview",
+    "qwen3-vl-plus": "Qwen3-VL-Plus",
+    "deepseek-r1": "DeepSeek-R1",
+    "qwen3-32b": "Qwen3-32B",
+    "qwen3-235b-a22b-thinking-2507": "Qwen3-235B-A22B-Thinking",
+    "deepseek-v3": "DeepSeek-V3",
+    "deepseek-v3.2": "DeepSeek-V3.2-Exp",
+    "kimi-k2": "Kimi-K2",
+    "qwen3-235b": "Qwen3-235B-A22B",
+    "qwen3-235b-a22b-instruct": "Qwen3-235B-A22B-Instruct",
+    "qwen3-max": "Qwen3-Max",
+    "kimi-k2-0905": "Kimi-K2-0905",
+    "qwen3-coder-plus": "Qwen3-Coder-Plus"
+  },
+  "nano-gpt": {
+    "auto-model": "Auto model"
+  },
+  "modelscope": {
+    "ZhipuAI/GLM-4.5": "GLM-4.5",
+    "ZhipuAI/GLM-4.6": "GLM-4.6",
+    "Qwen/Qwen3-235B-A22B-Instruct-2507": "Qwen3 235B A22B Instruct 2507",
+    "Qwen/Qwen3-Coder-30B-A3B-Instruct": "Qwen3 Coder 30B A3B Instruct",
+    "Qwen/Qwen3-30B-A3B-Thinking-2507": "Qwen3 30B A3B Thinking 2507",
+    "Qwen/Qwen3-30B-A3B-Instruct-2507": "Qwen3 30B A3B Instruct 2507",
+    "Qwen/Qwen3-235B-A22B-Thinking-2507": "Qwen3-235B-A22B-Thinking-2507"
+  },
+  "tencent-tokenhub": {
+    "hy3-preview": "Hy3 preview",
+    "hy3": "Hy3"
+  },
+  "xiaomi-token-plan-sgp": {
+    "mimo-v2.5-pro": "MiMo-V2.5-Pro",
+    "mimo-v2-pro": "MiMo-V2-Pro",
+    "mimo-v2.5": "MiMo-V2.5"
+  },
+  "alibaba-token-plan": {
+    "kimi-k2.7-code": "Kimi K2.7 Code",
+    "qwen3.8-max-preview": "Qwen3.8 Max Preview",
+    "qwen3.7-max": "Qwen3.7 Max",
+    "deepseek-v4-flash": "DeepSeek V4 Flash",
+    "deepseek-v4-pro-0813": "DeepSeek V4 Pro 0813",
+    "deepseek-v4-pro": "DeepSeek V4 Pro",
+    "deepseek-v3.2": "DeepSeek V3.2",
+    "glm-5": "GLM-5",
+    "qwen3.8-max": "Qwen3.8 Max",
+    "qwen3.7-plus": "Qwen3.7 Plus",
+    "qwen3.8-flash": "Qwen3.8 Flash",
+    "kimi-k2.5": "Kimi K2.5",
+    "glm-5.2": "GLM-5.2",
+    "qwen3.6-plus": "Qwen3.6 Plus",
+    "glm-5.1": "GLM-5.1",
+    "MiniMax-M2.5": "MiniMax-M2.5",
+    "deepseek-v4-flash-0731": "DeepSeek V4 Flash 0731",
+    "qwen3.6-flash": "Qwen3.6 Flash",
+    "kimi-k2.6": "Kimi K2.6"
+  },
+  "huggingface": {
+    "zai-org/GLM-4.7-Flash": "GLM-4.7-Flash"
+  },
+  "jiekou": {
+    "xiaomimimo/mimo-v2-flash": "XiaomiMiMo/MiMo-V2-Flash"
+  },
+  "openrouter": {
+    "nvidia/nemotron-3-super-120b-a12b:free": "Nemotron 3 Super (free)",
+    "nvidia/nemotron-3.5-lightning:free": "Nemotron 3.5 Lightning (free)",
+    "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": "Nemotron 3 Nano Omni (free)",
+    "nvidia/nemotron-3-ultra-550b-a55b:free": "Nemotron 3 Ultra (free)",
+    "z-ai/glm-5.2:free": "GLM 5.2 (free)",
+    "google/gemma-4-31b-it:free": "Gemma 4 31B (free)",
+    "google/gemma-4-26b-a4b-it:free": "Gemma 4 26B A4B  (free)",
+    "openrouter/free": "Free Models Router",
+    "poolside/laguna-xs-2.1:free": "Laguna XS 2.1 (free)",
+    "poolside/laguna-s-2.1:free": "Laguna S 2.1 (free)",
+    "cohere/north-mini-code:free": "North Mini Code (free)",
+    "liquid/lfm-2.5-2.6b:free": "LFM2.5-2.6B (free)",
+    "thinkingmachines/inkling:free": "Inkling (free)",
+    "thinkingmachines/inkling-small:free": "Inkling Small (free)",
+    "inclusionai/ling-3.0-flash-fin:free": "Ling 3.0 Flash Fin (free)",
+    "dots-studio/dots-3-note-preview:free": "Dots3-Note Preview (free)",
+    "minimax/minimax-m3:free": "MiniMax M3 (free)",
+    "minimax/minimax-m2.7:free": "MiniMax M2.7 (free)"
+  },
+  "poolside": {
+    "poolside/laguna-m.1": "Laguna M.1",
+    "poolside/laguna-s-2.1": "Laguna S 2.1",
+    "poolside/laguna-xs-2.1": "Laguna XS 2.1"
+  },
+  "hetzner": {
+    "Qwen3.8-27B": "Qwen3.8-27B",
+    "Qwen/Qwen3.6-35B-A3B-FP8": "Qwen3.6 35B A3B FP8"
+  },
+  "regolo-ai": {
+    "brick-v1-beta": "Brick v1 Beta"
+  },
+  "lynkr": {
+    "lynkr-auto": "Lynkr Auto (complexity routing)"
+  },
+  "standardcompute": {
+    "standardcompute": "Standard Compute"
+  },
+  "kenari": {
+    "gemini-3-1-pro": "Gemini 3.1 Pro Preview",
+    "minimax-m2-7": "MiniMax-M2.7",
+    "claude-opus-4-7": "Claude Opus 4.7",
+    "nemotron-3-super-120b-a12b:free": "Nemotron 3 Super 120B A12B (Free)",
+    "glm-4-7-flash:free": "GLM-4.7-Flash (Free)",
+    "nemotron-3-nano-30b-a3b": "Nemotron 3 Nano 30B A3B",
+    "gemini-3-7-flash": "Gemini 3.7 Flash",
+    "qwen3-8-max": "Qwen3.8 Max",
+    "kimi-k3": "Kimi K3",
+    "gpt-5-6-luna": "GPT-5.6 Luna",
+    "deepseek-v4-flash": "DeepSeek V4 Flash",
+    "gpt-5-6-terra": "GPT-5.6 Terra",
+    "gemini-2-5-flash-lite": "Gemini 2.5 Flash-Lite",
+    "claude-opus-4-8": "Claude Opus 4.8",
+    "deepseek-v4-pro": "DeepSeek V4 Pro",
+    "nemotron-3-super-120b-a12b": "Nemotron 3 Super 120B A12B",
+    "mimo-v2-5:free": "MiMo-V2.5 (Free)",
+    "claude-sonnet-5": "Claude Sonnet 5",
+    "glm-5-2": "GLM-5.2",
+    "gemini-3-6-flash": "Gemini 3.6 Flash",
+    "gemma-4-31b-it": "Gemma 4 31B IT",
+    "grok-4-6": "Grok 4.6",
+    "gemini-3-1-flash-lite": "Gemini 3.1 Flash Lite",
+    "minimax-m3": "MiniMax-M3",
+    "kimi-k2-7-code": "Kimi K2.7 Code",
+    "gpt-5-5": "GPT-5.5",
+    "gpt-oss-120b": "GPT OSS 120B",
+    "glm-5-3": "GLM-5.3",
+    "step-3-7-flash": "Step 3.7 Flash",
+    "nemotron-3-ultra-550b-a55b": "Nemotron 3 Ultra 550B A55B",
+    "kimi-k2-7-code:free": "Kimi K2.7 Code (Free)",
+    "step-3-7-flash:free": "Step 3.7 Flash (Free)",
+    "claude-sonnet-4-6": "Claude Sonnet 4.6",
+    "gemini-2-5-flash": "Gemini 2.5 Flash",
+    "mistral-medium-3-5:free": "Mistral Medium 3.5 (Free)",
+    "deepseek-v4-flash:free": "DeepSeek V4 Flash (Free)",
+    "glm-5-1": "GLM-5.1",
+    "qwen3-7-plus": "Qwen3.7 Plus",
+    "kimi-k2-6": "Kimi K2.6",
+    "claude-fable-5": "Claude Fable 5",
+    "minimax-m2-7-highspeed": "MiniMax-M2.7-highspeed",
+    "gpt-5-6-sol": "GPT-5.6 Sol",
+    "hy3": "Hy3",
+    "glm-5-3-flash": "GLM-5.3-Flash",
+    "claude-opus-5": "Claude Opus 5",
+    "grok-4-5": "Grok 4.5",
+    "mimo-v2-5-pro": "MiMo-V2.5-Pro",
+    "mimo-v2-5": "MiMo-V2.5",
+    "grok-build-0-1": "Grok Build 0.1",
+    "gpt-5-4-mini": "GPT-5.4 mini",
+    "hy3:free": "Hy3 (Free)",
+    "gpt-oss-20b": "GPT OSS 20B",
+    "mistral-large:free": "Mistral Large (Free)",
+    "gemini-3-5-flash": "Gemini 3.5 Flash",
+    "kimi-k2-6:free": "Kimi K2.6 (Free)"
+  },
+  "cohere": {
+    "north-mini-code-1-0": "North Mini Code"
+  },
+  "sensenova": {
+    "deepseek-v4-flash": "DeepSeek V4 Flash",
+    "glm-5.2": "GLM-5.2",
+    "sensenova-6.8-flash-lite": "SenseNova 6.8 Flash Lite"
+  },
+  "zai": {
+    "glm-4.5-flash": "GLM-4.5-Flash",
+    "glm-4.7-flash": "GLM-4.7-Flash"
+  },
+  "alibaba-cn": {
+    "deepseek-r1-distill-qwen-1-5b": "DeepSeek R1 Distill Qwen 1.5B",
+    "deepseek-r1-distill-llama-8b": "DeepSeek R1 Distill Llama 8B"
+  },
+  "minimax-cn-coding-plan": {
+    "MiniMax-M2.7": "MiniMax-M2.7",
+    "MiniMax-M2.7-highspeed": "MiniMax-M2.7-highspeed",
+    "MiniMax-M2.1": "MiniMax-M2.1",
+    "MiniMax-M2": "MiniMax-M2",
+    "MiniMax-M2.5-highspeed": "MiniMax-M2.5-highspeed",
+    "MiniMax-M3": "MiniMax-M3",
+    "MiniMax-M2.5": "MiniMax-M2.5"
+  },
+  "unorouter": {
+    "gpt-5.4:free": "GPT-5.4",
+    "glm-5.2:free": "GLM-5.2",
+    "glm-4.5-flash:free": "GLM-4.5-Flash",
+    "gpt-5.5:free": "GPT-5.5",
+    "step-3.7-flash:free": "Step 3.7 Flash",
+    "deepseek-v4-pro:free": "DeepSeek V4 Pro",
+    "gemma-4-31b-it:free": "Gemma 4 31B IT",
+    "deepseek-v4-flash:free": "DeepSeek V4 Flash",
+    "nemotron-3-ultra-550b-a55b:free": "Nemotron 3 Ultra 550B A55B",
+    "qwen3.5-397b-a17b:free": "Qwen3.5 397B-A17B",
+    "minimax-m2.7:free": "MiniMax-M2.7"
+  },
+  "opencode-go": {
+    "ox-alpha-free": "Ox Alpha Free (Unlimited)"
+  },
+  "lmstudio": {
+    "openai/gpt-oss-20b": "GPT OSS 20B",
+    "qwen/qwen3-30b-a3b-2507": "Qwen3 30B A3B 2507",
+    "qwen/qwen3-coder-30b": "Qwen3 Coder 30B"
+  },
+  "volcengine-coding-plan": {
+    "kimi-k2.7-code": "Kimi K2.7 Code",
+    "deepseek-v4-flash": "DeepSeek V4 Flash",
+    "deepseek-v4-pro": "DeepSeek V4 Pro",
+    "doubao-seed-evolving": "Seed Evolving",
+    "minimax-m3": "MiniMax-M3",
+    "doubao-seed-2.1-turbo": "Seed 2.1 Turbo",
+    "glm-5.3": "GLM-5.3",
+    "doubao-seed-2.0-lite": "Seed 2.0 Lite"
+  },
+  "xiaomi-token-plan-cn": {
+    "mimo-v2.5": "MiMo-V2.5",
+    "mimo-v2-pro": "MiMo-V2-Pro",
+    "mimo-v2.5-pro": "MiMo-V2.5-Pro"
+  },
+  "zhipuai-coding-plan": {
+    "glm-5v-turbo": "GLM-5V-Turbo",
+    "glm-5.3": "GLM-5.3",
+    "glm-5.1": "GLM-5.1",
+    "glm-5.3-highspeed": "GLM-5.3 Highspeed",
+    "glm-5.3-flash": "GLM-5.3-Flash",
+    "glm-5.2-highspeed": "GLM-5.2 Highspeed",
+    "glm-5.2": "GLM-5.2",
+    "glm-5-turbo": "GLM-5-Turbo",
+    "glm-4.7": "GLM-4.7"
+  },
+  "llmtr": {
+    "poolside/laguna-xs-2.1": "Laguna XS 2.1"
+  },
+  "merge-gateway": {
+    "nvidia/nemotron-3.5-lightning-30b-a3b": "Nemotron 3.5 Lightning 30B A3B"
+  },
+  "llama": {
+    "llama-4-scout-17b-16e-instruct-fp8": "Llama-4-Scout-17B-16E-Instruct-FP8",
+    "llama-3.3-70b-instruct": "Llama-3.3-70B-Instruct",
+    "cerebras-llama-4-scout-17b-16e-instruct": "Cerebras-Llama-4-Scout-17B-16E-Instruct",
+    "llama-3.3-8b-instruct": "Llama-3.3-8B-Instruct",
+    "cerebras-llama-4-maverick-17b-128e-instruct": "Cerebras-Llama-4-Maverick-17B-128E-Instruct",
+    "llama-4-maverick-17b-128e-instruct-fp8": "Llama-4-Maverick-17B-128E-Instruct-FP8",
+    "groq-llama-4-maverick-17b-128e-instruct": "Groq-Llama-4-Maverick-17B-128E-Instruct"
+  },
+  "bothub": {
+    "gemma-4-31b-it:free": "Gemma 4 31B IT (free)",
+    "nemotron-3-ultra-550b-a55b:free": "Nemotron 3 Ultra (free)"
+  },
+  "alibaba-coding-plan-cn": {
+    "glm-4.7": "GLM-4.7",
+    "qwen3-coder-next": "Qwen3 Coder Next",
+    "qwen3.5-plus": "Qwen3.5 Plus",
+    "glm-5": "GLM-5",
+    "qwen3.7-plus": "Qwen3.7 Plus",
+    "kimi-k2.5": "Kimi K2.5",
+    "qwen3.6-plus": "Qwen3.6 Plus",
+    "qwen3-max-2026-01-23": "Qwen3 Max",
+    "MiniMax-M2.5": "MiniMax-M2.5",
+    "qwen3-coder-plus": "Qwen3 Coder Plus"
+  },
+  "zeldoc": {
+    "zdev": "ZDev"
+  },
+  "tokenrouter": {
+    "z-ai/glm-5.3-free": "GLM-5.3 (free)"
+  },
+  "minimax-coding-plan": {
+    "MiniMax-M2.7": "MiniMax-M2.7",
+    "MiniMax-M2.7-highspeed": "MiniMax-M2.7-highspeed",
+    "MiniMax-M2.1": "MiniMax-M2.1",
+    "MiniMax-M2": "MiniMax-M2",
+    "MiniMax-M2.5-highspeed": "MiniMax-M2.5-highspeed",
+    "MiniMax-M3": "MiniMax-M3",
+    "MiniMax-M2.5": "MiniMax-M2.5"
+  },
+  "zai-coding-plan": {
+    "glm-4.7": "GLM-4.7",
+    "glm-5-turbo": "GLM-5-Turbo",
+    "glm-5.3": "GLM-5.3",
+    "glm-5.2": "GLM-5.2",
+    "glm-5.2-highspeed": "GLM-5.2 Highspeed",
+    "glm-5.3-highspeed": "GLM-5.3 Highspeed",
+    "glm-5.3-flash": "GLM-5.3-Flash"
+  },
+  "zenmux": {
+    "z-ai/glm-4.7-flash-free": "GLM 4.7 Flash (Free)",
+    "z-ai/glm-5.2-free": "GLM 5.2 (Free)",
+    "z-ai/glm-4.6v-flash-free": "GLM 4.6V Flash (Free)",
+    "moonshotai/kimi-k3-free": "Kimi K3 (Free)",
+    "moonshotai/kimi-k2.7-code-free": "Kimi K2.7 Code (Free)",
+    "anthropic/claude-sonnet-5-free": "Claude Sonnet 5 (Free)",
+    "stepfun/step-3.7-flash-free": "Step 3.7 Flash (Free)"
+  },
+  "alibaba-coding-plan": {
+    "glm-4.7": "GLM-4.7",
+    "qwen3-coder-next": "Qwen3 Coder Next",
+    "qwen3.5-plus": "Qwen3.5 Plus",
+    "glm-5": "GLM-5",
+    "qwen3.7-plus": "Qwen3.7 Plus",
+    "kimi-k2.5": "Kimi K2.5",
+    "qwen3.6-plus": "Qwen3.6 Plus",
+    "qwen3-max-2026-01-23": "Qwen3 Max",
+    "MiniMax-M2.5": "MiniMax-M2.5",
+    "qwen3-coder-plus": "Qwen3 Coder Plus"
+  },
+  "kuae-cloud-coding-plan": {
+    "GLM-4.7": "GLM-4.7"
+  },
+  "nova": {
+    "nova-2-lite-v1": "Nova 2 Lite",
+    "nova-2-pro-v1": "Nova 2 Pro"
+  },
+  "inferx": {
+    "deepseek-v4-flash": "deepseek-v4-flash",
+    "Agents-A1": "Agents-A1",
+    "Qwen3-Coder-Next-FP8": "Qwen3 Coder Next FP8",
+    "Qwen3-Coder-Next-FP8-no-thinking": "Qwen3-Coder-Next-FP8-no-thinking",
+    "Qwen3.6-27B-FP8": "Qwen3.6 27B FP8",
+    "Qwen3.6-35B-A3B-FP8": "Qwen3.6 35B A3B FP8",
+    "Ornith-1.0-35B-FP8": "Ornith-1.0-35B-FP8",
+    "Qwen3.6-35B-A3B-fp8-no-thinking": "Qwen3.6-35B-A3B-fp8-no-thinking",
+    "gemma-4-31B-it-fp8": "Gemma 4 31B IT FP8",
+    "mimo-v25": "mimo-v25",
+    "Devstral-2-123B-Instruct-2512-int4-AutoRound": "Devstral-2-123B-Instruct-2512-int4-AutoRound"
+  },
+  "zhipuai": {
+    "glm-4.7-flash": "GLM-4.7-Flash",
+    "glm-4.5-flash": "GLM-4.5-Flash"
+  },
+  "pendra": {
+    "deepseek-v4-flash": "DeepSeek V4 Flash",
+    "llama3.3:70b": "Llama-3.3-70B-Instruct",
+    "qwen3.6:27b": "Qwen3.6 27B",
+    "gpt-oss:120b": "GPT OSS 120B",
+    "glm-4.7-flash": "GLM-4.7-Flash",
+    "qwen3-coder:30b": "Qwen3-Coder 30B-A3B Instruct"
+  },
+  "opencode": {
+    "ling-3.0-flash-free": "Ling-3.0-flash Free",
+    "laguna-s-2.1-free": "Laguna S 2.1 Free",
+    "nemotron-3.5-lightning-free": "Nemotron 3.5 Lightning Free",
+    "ring-2.6-1t-free": "Ring 2.6 1T Free",
+    "nemotron-3-super-free": "Nemotron 3 Super Free",
+    "kimi-k2.5-free": "Kimi K2.5 Free",
+    "north-mini-code-free": "North Mini Code Free",
+    "deepseek-v4-flash-free": "DeepSeek V4 Flash Free",
+    "minimax-m3-free": "MiniMax-M3 Free",
+    "nemotron-3-ultra-free": "Nemotron 3 Ultra Free",
+    "glm-4.7-free": "GLM-4.7 Free",
+    "trinity-large-preview-free": "Trinity Large Preview",
+    "grok-code": "Grok Code Fast 1",
+    "ling-3.0-flash-fin-free": "Ling 3.0 Flash Fin Free",
+    "hy3-preview-free": "Hy3 preview Free",
+    "hy3-free": "Hy3 Free",
+    "muse-spark-1.2-contributor-free": "Muse Spark 1.2 Free",
+    "x-preview-f-free": "Ox Alpha Free (Unlimited)",
+    "ling-2.6-flash-free": "Ling 2.6 Flash Free",
+    "mimo-v2-pro-free": "MiMo V2 Pro Free",
+    "mimo-v2-flash-free": "MiMo V2 Flash Free",
+    "minimax-m2.5-free": "MiniMax-M2.5 Free",
+    "glm-5-free": "GLM-5 Free",
+    "qwen3.6-plus-free": "Qwen3.6 Plus Free",
+    "mimo-v2.5-free": "MiMo V2.5 Free",
+    "minimax-m2.1-free": "MiniMax-M2.1 Free",
+    "ling-3.0-tiny-free": "Ling-3.0-tiny Free",
+    "big-pickle": "Big Pickle",
+    "mimo-v2-omni-free": "MiMo V2 Omni Free",
+    "longcat-2.0-free": "LongCat-2.0 Free"
+  },
+  "requesty": {
+    "leanstral-1-5@eu": "leanstral-1-5@eu",
+    "nemotron-3-super-120b-a12b": "Nemotron 3 Super 120B A12B",
+    "gemma-4-31b-it": "Gemma 4 31B IT",
+    "nemotron-3-nano-omni-30b-a3b-reasoning": "Nemotron 3 Nano Omni 30B A3B Reasoning",
+    "muse-glimmer-30b": "Muse Glimmer 30B",
+    "nemotron-3-ultra-550b-a55b": "Nemotron 3 Ultra 550B A55B",
+    "nemotron-3.5-lightning-30b-a3b": "nemotron-3.5-lightning-30b-a3b",
+    "ling-3.0-tiny": "ling-3.0-tiny",
+    "leanstral-1-5": "leanstral-1-5"
+  },
+  "atomic-chat": {
+    "Meta-Llama-3_1-8B-Instruct-GGUF": "Meta Llama 3.1 8B Instruct (GGUF)",
+    "Qwen3_5-9B-Q4_K_M": "Qwen 3.5 9B (Q4_K_M)",
+    "Qwen3_5-9B-MLX-4bit": "Qwen 3.5 9B (MLX 4-bit)"
+  },
+  "siliconflow-cn": {
+    "Qwen/Qwen3.5-4B": "Qwen/Qwen3.5-4B"
+  },
+  "poe": {
+    "google/gemma-4-31b": "Gemma-4-31B",
+    "openai/gpt-5.3-codex-spark": "GPT-5.3-Codex-Spark",
+    "fireworks-ai/kimi-k2.5-fw": "Kimi-K2.5-FW"
+  },
+  "mistral": {
+    "labs-devstral-small-2512": "Devstral Small 2"
+  },
+  "aihubmix": {
+    "xiaomi-mimo-v2.5-pro-free": "Xiaomi MiMo-V2.5-Pro (free)",
+    "coding-glm-5.1-free": "Coding GLM 5.1 (free)",
+    "coding-minimax-m2.7-free": "Coding MiniMax M2.7 (Free)",
+    "xiaomi-mimo-v2.5-free": "Xiaomi MiMo-V2.5 (free)"
+  },
+  "empiriolabs": {
+    "glm-4-5-flash": "GLM 4.5 Flash",
+    "glm-4-7-flash": "GLM 4.7 Flash",
+    "glm-4-6v-flash": "GLM 4.6V Flash",
+    "mistral-medium-3": "Mistral Medium 3"
+  },
+  "tencent-coding-plan": {
+    "hunyuan-2.0-thinking": "Tencent HY 2.0 Think",
+    "glm-5": "GLM-5",
+    "hunyuan-2.0-instruct": "Tencent HY 2.0 Instruct",
+    "kimi-k2.5": "Kimi-K2.5",
+    "tc-code-latest": "Auto",
+    "minimax-m2.5": "MiniMax-M2.5",
+    "hunyuan-t1": "Hunyuan-T1",
+    "hunyuan-turbos": "Hunyuan-TurboS"
+  },
+  "xiaomi-token-plan-ams": {
+    "mimo-v2.5-pro": "MiMo-V2.5-Pro",
+    "mimo-v2-pro": "MiMo-V2-Pro",
+    "mimo-v2.5": "MiMo-V2.5"
+  },
+  "scnet-token-plan": {
+    "DeepSeek-V4-Pro": "DeepSeek V4 Pro",
+    "Kimi-K2.5": "Kimi K2.5",
+    "MiniMax-M2.7": "MiniMax-M2.7",
+    "DeepSeek-V4-Flash-0731": "DeepSeek V4 Flash 0731",
+    "Qwen3.8-Max": "Qwen3.8 Max",
+    "MiniMax-M3": "MiniMax-M3",
+    "GLM-5.1": "GLM-5.1",
+    "DeepSeek-V3.2": "DeepSeek V3.2",
+    "Kimi-K2.7-Code": "Kimi K2.7 Code",
+    "Kimi-K3": "Kimi K3",
+    "GLM-5": "GLM-5",
+    "MiniMax-M2.5": "MiniMax-M2.5",
+    "GLM-5.2": "GLM-5.2",
+    "Kimi-K2.6": "Kimi K2.6",
+    "DeepSeek-V4-Pro-0813": "DeepSeek V4 Pro 0813",
+    "DeepSeek-V4-Flash": "DeepSeek V4 Flash",
+    "MiMo-V2.5-Pro": "MiMo-V2.5-Pro"
+  },
+  "vercel": {
+    "meta/llama-3.3-70b": "Llama-3.3-70B-Instruct",
+    "meta/llama-4-scout": "Llama-4-Scout-17B-16E-Instruct-FP8",
+    "meta/llama-4-maverick": "Llama-4-Maverick-17B-128E-Instruct-FP8",
+    "poolside/laguna-s-2.1-free": "Laguna S 2.1 Free",
+    "inclusionai/ling-3.0-flash-fin-free": "Ling 3.0 Flash Fin (Free)",
+    "inclusionai/ling-3.0-flash-fin": "Ling 3.0 Flash Fin",
+    "minimax/minimax-m3-free": "MiniMax M3 (Free)",
+    "minimax/minimax-m2.7-free": "Minimax M2.7 (Free)"
+  },
+  "llmgateway": {
+    "custom": "Custom Model",
+    "auto": "Auto Route"
+  },
+  "agnes": {
+    "agnes-2.0-flash": "Agnes 2.0 Flash",
+    "agnes-2.5-flash": "Agnes 2.5 Flash"
+  },
+  "gitlab": {
+    "duo-chat-opus-4-5": "Agentic Chat (Claude Opus 4.5)",
+    "duo-chat-gpt-5-2-codex": "Agentic Chat (GPT-5.2 Codex)",
+    "duo-chat-gpt-5-2": "Agentic Chat (GPT-5.2)",
+    "duo-chat-sonnet-4-5": "Agentic Chat (Claude Sonnet 4.5)",
+    "duo-chat-gpt-5-4-mini": "Agentic Chat (GPT-5.4 Mini)",
+    "duo-chat-gpt-5-5": "Agentic Chat (GPT-5.5)",
+    "duo-chat-haiku-4-5": "Agentic Chat (Claude Haiku 4.5)",
+    "duo-chat-gpt-5-6-sol": "Agentic Chat (GPT-5.6 Sol)",
+    "duo-chat-gpt-5-6-luna": "Agentic Chat (GPT-5.6 Luna)",
+    "duo-chat-opus-4-8": "Agentic Chat (Claude Opus 4.8)",
+    "duo-chat-fable-5": "Agentic Chat (Claude Fable 5)",
+    "duo-chat-gpt-5-6-terra": "Agentic Chat (GPT-5.6 Terra)",
+    "duo-chat-gpt-5-1": "Agentic Chat (GPT-5.1)",
+    "duo-chat-gpt-5-codex": "Agentic Chat (GPT-5 Codex)",
+    "duo-chat-opus-4-7": "Agentic Chat (Claude Opus 4.7)",
+    "duo-chat-sonnet-5": "Agentic Chat (Claude Sonnet 5)",
+    "duo-chat-gpt-5-mini": "Agentic Chat (GPT-5 Mini)",
+    "duo-chat-gpt-5-4-nano": "Agentic Chat (GPT-5.4 Nano)",
+    "duo-chat-opus-5": "Agentic Chat (Claude Opus 5)",
+    "duo-chat-opus-4-6": "Agentic Chat (Claude Opus 4.6)",
+    "duo-chat-gpt-5-4": "Agentic Chat (GPT-5.4)",
+    "duo-chat-sonnet-4-6": "Agentic Chat (Claude Sonnet 4.6)",
+    "duo-chat-gpt-5-3-codex": "Agentic Chat (GPT-5.3 Codex)"
+  },
+  "alibaba-token-plan-cn": {
+    "kimi-k2.7-code": "Kimi K2.7 Code",
+    "qwen3.8-max-preview": "Qwen3.8 Max Preview",
+    "qwen3.7-max": "Qwen3.7 Max",
+    "deepseek-v4-flash": "DeepSeek V4 Flash",
+    "deepseek-v4-pro-0813": "DeepSeek V4 Pro 0813",
+    "deepseek-v4-pro": "DeepSeek V4 Pro",
+    "deepseek-v3.2": "DeepSeek V3.2",
+    "glm-5": "GLM-5",
+    "qwen3.8-max": "Qwen3.8 Max",
+    "qwen3.7-plus": "Qwen3.7 Plus",
+    "qwen3.8-flash": "Qwen3.8 Flash",
+    "kimi-k2.5": "Kimi K2.5",
+    "glm-5.2": "GLM-5.2",
+    "qwen3.6-plus": "Qwen3.6 Plus",
+    "glm-5.1": "GLM-5.1",
+    "MiniMax-M2.5": "MiniMax-M2.5",
+    "deepseek-v4-flash-0731": "DeepSeek V4 Flash 0731",
+    "qwen3.6-flash": "Qwen3.6 Flash",
+    "kimi-k2.6": "Kimi K2.6"
+  },
+  "tencent-token-plan": {
+    "hy3": "Hy3"
+  },
+  "kilo": {
+    "tencent/hy3:free": "Tencent: Hy3 (free)",
+    "nvidia/nemotron-3-super-120b-a12b:free": "NVIDIA: Nemotron 3 Super (free)",
+    "nvidia/nemotron-3.5-lightning:free": "NVIDIA: Nemotron 3.5 Lightning (free)",
+    "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": "NVIDIA: Nemotron 3 Nano Omni (free)",
+    "nvidia/nemotron-3-ultra-550b-a55b:free": "NVIDIA: Nemotron 3 Ultra (free)",
+    "openrouter/auto": "Auto Router",
+    "openrouter/free": "OpenRouter Free Models Router",
+    "poolside/laguna-xs-2.1:free": "Poolside: Laguna XS 2.1 (free)",
+    "poolside/laguna-s-2.1:free": "Poolside: Laguna S 2.1 (free)",
+    "cohere/north-mini-code:free": "Cohere: North Mini Code (free)",
+    "kilo-auto/free": "Auto Free",
+    "meituan/longcat-2.0-free": "Meituan: LongCat 2.0 (free)",
+    "stepfun/step-3.7-flash:free": "StepFun: Step 3.7 Flash (free)",
+    "liquid/lfm-2.5-2.6b:free": "LiquidAI: LFM2.5-2.6B (free)",
+    "thinkingmachines/inkling:free": "Thinking Machines: Inkling (free)",
+    "thinkingmachines/inkling-small:free": "Thinking Machines: Inkling Small (free)",
+    "inclusionai/ling-3.0-flash-fin:free": "Ling 3.0 Flash Fin (free)",
+    "dots-studio/dots-3-note-preview:free": "Dots Studio: Dots3-Note Preview (free)",
+    "minimax/minimax-m3:free": "MiniMax: MiniMax M3 (free)",
+    "minimax/minimax-m2.7:free": "MiniMax: MiniMax M2.7 (free)"
+  },
+  "kimi-for-coding": {
+    "k3-256k": "Kimi K3-256K",
+    "kimi-for-coding-highspeed": "Kimi For Coding HighSpeed",
+    "k3": "Kimi K3",
+    "kimi-for-coding": "Kimi K2.7 Code"
+  }
+}
