@@ -6,7 +6,7 @@ on:
   workflow_dispatch: {}     # cho phép chạy tay từ tab Actions
 
 permissions:
-  contents: write           # cho phép GITHUB_TOKEN commit state vào repo
+  contents: read
 
 jobs:
   notify:
@@ -29,9 +29,3 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python check_free_models.py
-
-      - name: Commit state
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore: cập nhật free model state"
-          file_pattern: data/free_models.json

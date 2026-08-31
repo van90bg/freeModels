@@ -5,9 +5,8 @@ Quet toan bo catalog models.dev, lay danh sach cac model free
 
 Khong verify qua API key. Chi doc catalog cong khai + ghi ket qua ra sheet.
 
-Luu y: trang thai cac model free da biet luu o data/free_models.json (commit
-vao repo). Lan chay sau doc ban tai HEAD de so sanh, chi bao model CHUA tung
-xuat hien.
+Trang thai model free da biet duoc lay TU SHEET (cot Provider ID + Model ID
+cua tab "Model"): lan chay sau chi bao nhung model CHUA co trong sheet.
 
 Can secret (env khi chay trong GitHub Actions):
   GOOGLE_SERVICE_ACCOUNT_JSON  JSON service account co quyen Editor tren sheet
@@ -19,7 +18,6 @@ Chay: python check_free_models.py
 
 import json
 import os
-import subprocess
 import sys
 import time
 import urllib.parse
@@ -27,7 +25,6 @@ import urllib.request
 from pathlib import Path
 
 CATALOG_URL = "https://models.dev/api.json"
-STATE_FILE = Path("data/free_models.json")
 
 SPREADSHEET_ID = "1X6YSk4Mcfjbiwj0Ekr4jNxRjYHjtXp3PZoW__0nnfm8"
 SHEET_MODEL = "Model"
@@ -130,21 +127,23 @@ def build_rows(free: dict, catalog: dict) -> list[dict]:
     return rows
 
 
-def write_sheet(rows: list[dict]) -> None:
-    try:
-        import gspread
-        from google.oauth2.service_account import Credentials
-    except ImportError:
-        print("WARNING: chua cai gspread/google-auth, bo qua ghi sheet.")
-        return
+def get_sheet_client():
+    import gspread
+    from google.oauth2.service_account import Credentials
     raw = os.environ.get("GOOGLE_SERVICE_ACCOUNT_JSON", "")
     if not raw:
+        return None
+    creds = Credentials.from_service_account_info(
+        json.loads(raw), scopes=["https://www.googleapis.com/auth/spreadsheets"])
+    return gspread.authorize(creds)
+
+
+def write_sheet(rows: list[dict]) -> None:
+    client = get_sheet_client()
+    if client is None:
         print("WARNING: thieu GOOGLE_SERVICE_ACCOUNT_JSON, bo qua ghi sheet.")
         return
     try:
-        creds = Credentials.from_service_account_info(
-            json.loads(raw), scopes=["https://www.googleapis.com/auth/spreadsheets"])
-        client = gspread.authorize(creds)
         ss = client.open_by_key(SPREADSHEET_ID)
         try:
             ws = ss.worksheet(SHEET_MODEL)
@@ -158,19 +157,34 @@ def write_sheet(rows: list[dict]) -> None:
         ws.update(data, value_input_option="RAW")
         print(f"Da ghi {len(rows)} dong vao sheet '{SHEET_MODEL}'")
     except Exception as e:  # noqa: BLE001
-        print(f"WARNING: ghi sheet loi (tiep tuc thong bao): {e}")
+        print(f"WARNING: ghi sheet loi: {e}")
 
 
-def load_previous() -> dict:
-    """Doc ban state tai HEAD; tra ve {} neu chua co."""
-    r = subprocess.run(["git", "show", f"HEAD:{STATE_FILE}"], capture_output=True)
-    if r.returncode != 0:
-        return {}
+def load_existing_pairs() -> set[tuple[str, str]] | None:
+    """Doc (provider_id, model_id) da co trong sheet. None neu khong doc duoc."""
+    client = get_sheet_client()
+    if client is None:
+        return None
     try:
-        return json.loads(r.stdout.decode("utf-8"))
+        ws = client.open_by_key(SPREADSHEET_ID).worksheet(SHEET_MODEL)
+        vals = ws.get_all_values()
+        if len(vals) < 2:
+            return set()
+        header = [str(h).strip().lower() for h in vals[0]]
+        pid_i = header.index("provider id") if "provider id" in header else -1
+        mid_i = header.index("model id") if "model id" in header else -1
+        if mid_i < 0:
+            return set()
+        out = set()
+        for row in vals[1:]:
+            pid = row[pid_i] if 0 <= pid_i < len(row) else ""
+            mid = row[mid_i] if 0 <= mid_i < len(row) else ""
+            if mid:
+                out.add((pid, mid))
+        return out
     except Exception as e:  # noqa: BLE001
-        print(f"WARNING: khong parse duoc state cu: {e}")
-        return {}
+        print(f"WARNING: khong doc duoc sheet de doi chieu: {e}")
+        return None
 
 
 def as_pairs(state: dict) -> set[tuple[str, str]]:
@@ -211,45 +225,40 @@ def send_telegram(token: str, chat_id: str, text: str) -> None:
         print(f"Da gui Telegram (HTTP {r.status})")
 
 
-def write_state(state: dict) -> None:
-    STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
-    STATE_FILE.write_text(json.dumps(state, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-
-
 def main() -> None:
     catalog = fetch_catalog()
     free = collect_free(catalog)
-    # state chi luu {pid: {mid: name}} de diff
-    new_state = {pid: {mid: (str(m.get("name") or "").strip() or mid)
-                       for mid, m in mods.items()}
-                 for pid, mods in free.items()}
+    new_state = {
+        pid: {mid: (str(m.get("name") or "").strip() or mid) for mid, m in mods.items()}
+        for pid, mods in free.items()
+    }
+    current = as_pairs(new_state)
+
+    existing = load_existing_pairs()
 
     rows = build_rows(free, catalog)
     write_sheet(rows)
 
-    prev_state = load_previous()
-    prev = as_pairs(prev_state)
-    new = as_pairs(new_state)
-    added = new - prev
+    if existing is None:
+        print("Khong the doi chieu voi sheet, bo qua gui thong bao.")
+        return
 
+    added = current - existing
     if not added:
-        print("Khong co model free moi so voi lan chay truoc.")
-        write_state(new_state)
+        print("Khong co model free moi so voi sheet hien tai.")
         return
 
     print(f"Phat hien {len(added)} model free moi.")
-    token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
-    chat_id = os.environ.get("TELEGRAM_CHAT_ID", "")
+    token = (os.environ.get("TELEGRAM_BOT_TOKEN", "") or "").strip()
+    chat_id = (os.environ.get("TELEGRAM_CHAT_ID", "") or "").strip()
     if not token or not chat_id:
         print("WARNING: thieu TELEGRAM_BOT_TOKEN/TELEGRAM_CHAT_ID, bo qua gui thong bao.")
-    else:
-        for msg in build_messages(added, new_state):
-            try:
-                send_telegram(token, chat_id, msg)
-            except Exception as e:  # noqa: BLE001
-                print(f"WARNING: gui Telegram loi: {e}")
-
-    write_state(new_state)
+        return
+    for msg in build_messages(added, new_state):
+        try:
+            send_telegram(token, chat_id, msg)
+        except Exception as e:  # noqa: BLE001
+            print(f"WARNING: gui Telegram loi: {e}")
 
 
 if __name__ == "__main__":
